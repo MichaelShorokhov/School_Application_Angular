@@ -1,0 +1,30 @@
+<div>
+    <div>
+    <table>
+    <tr>
+    <td class="table">
+
+    <table>
+      <tr>
+        <th i18n="@@id" [translate]="'course.id'">ID</th>
+        <th i18n="@@year" [translate]="'course.year'">Year</th>
+      </tr>
+      <tr *ngFor="let course of courses">
+        <td>{{course.id}}</td>
+        <td><input [(ngModel)]="course.year" (change)="updateCourse(course)" type="text" class="text"></td>
+        <td><button (click) = "deleteCourse(course)" i18n="@@deleteCourseBtn" [translate]="'course.deleteBtn'">Delete Course</button></td>
+      </tr>
+
+    </table>
+    </td>
+    <td class="input">
+                <div class="inputPanel">
+                <p><label i18n="@@yearInput" [translate]="'course.yearInput'">Input Course Year </label>
+                <input type="text" [(ngModel)]="newCourse.year" required class="text"></p>
+                <p><button (click)="addCourse()" i18n="@@addCourseBtn" [translate]="'course.addBtn'">Add Course</button></p>
+            </div>
+      </td>
+      </tr>
+      </table>
+      </div>
+    </div>

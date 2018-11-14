@@ -1,0 +1,31 @@
+<div class="row" style="margin-top: 28px;">
+        <table>
+        <tr>
+        <td class="table">
+      <label i18n="@@studentSelect" [translate]="'student-subject.studentSelect'">Select Student </label>
+      <select [(ngModel)]="selectedStudent" (change)="getSubjectsByStudent(selectedStudent)" class="selct">
+          <option *ngFor="let student of students" [ngValue]="student">{{student.name}} {{student.surname}}</option>
+      </select>
+    <table *ngIf="subjectsByStudent.length!=0" class="table">
+      <tr>
+        <th i18n="@@name" [translate]="'student-subject.name'">Name</th>
+      </tr>
+      <tr *ngFor="let subject of subjectsByStudent" >
+        <td>{{subject.name}}</td>
+        <td><button (click) = "removeSubject(subject)" i18n="@@deleteSubjectBtn" [translate]="'student-subject.deleteBtn'">Delete Subject</button></td>
+      </tr>
+    </table>
+    </td>
+    <td class="input">
+    <div *ngIf="selectedStudent!=null" class="inputPanel">
+
+        <p><label i18n="@@subjectSelect" [translate]="'student-subject.subjectSelect'">Select Subject </label>
+                     <select [(ngModel)]="selectedSubject" required class="selct">
+                         <option *ngFor="let subject of subjects" [ngValue]="subject">{{subject.name}}</option>
+                     </select></p>
+        <p><button (click)="addSubject()" i18n="@@addSubjectBtn" [translate]="'student-subject.addBtn'">Add Subject</button></p>
+    </div>
+    </td>
+    </tr>
+    </table>
+ </div>

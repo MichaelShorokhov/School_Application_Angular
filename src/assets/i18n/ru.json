@@ -1,0 +1,134 @@
+{
+  "nav":{
+  "marks": "Оценки",
+  "title": "Программа для школы",
+  "students": "Студенты",
+  "teachers": "Учителя",
+  "subjects": "Предметы",
+  "terms": "Семестры",
+  "courses": "Курсы",
+  "groups": "Группы",
+  "lessons": "Уроки",
+  "listOfMarks": "Список оценок",
+  "teachersInGroups": "Учителя по группам",
+  "teachersInSubjects": "Учителя по предметам",
+  "studentsInSubjects": "Студенты по предметам"
+  },
+  "course": {
+  "id": "ИД",
+  "year": "Год",
+  "yearInput": "Введите год",
+  "addBtn": " Добавить курс",
+  "deleteBtn": "Удалить курс"
+  },
+  "group": {
+    "id": "ИД",
+    "name": "Название",
+    "course": "Курс",
+    "nameInput": "Введите название",
+    "courseSelect": "Выберите курс",
+    "addBtn": "Добавить группу",
+    "deleteBtn": "Удалить группу"
+  },
+  "lesson": {
+    "id": "ИД",
+    "date": "Дата",
+    "group": "Группа",
+    "teacher": "Учитель",
+    "term": "Семестр",
+    "subject": "Предмет",
+    "dateInput": "Введите дату",
+    "groupSelect": "Выберите группу",
+    "teacherSelect": "Выберите учителя",
+    "termSelect": "Выберите семестр",
+    "subjectSelect": "Выберите предмет",
+    "addBtn": "Добавить урок",
+    "deleteBtn": "Удалить урок"
+  },
+  "mark": {
+    "id": "ИД",
+    "value": "Значение",
+    "valueInput": "Введите значение",
+    "addBtn": "Добавить оценку",
+    "deleteBtn": "Удалить оценку"
+  },
+  "markForLesson": {
+    "id": "ИД",
+    "mark": "Оценка",
+    "lesson": "Урок",
+    "student": "Студент",
+    "markSelect": "Выберите оценку",
+    "studentSelect": "Выберите студента",
+    "lessonSelect": "Выберите урок",
+    "addBtn": "Добавить оценку в список",
+    "deleteBtn": "Удалить оценку"
+  },
+  "student":{
+    "id": "ИД",
+    "name": "Имя",
+    "surname": "Фамилия",
+    "age": "Возраст",
+    "phone": "Номер телефона",
+    "group": "Группа",
+    "nameInput": "Введите имя",
+    "surnameInput": "Введите фамилию",
+    "ageInput": "Введите возраст",
+    "phoneInput": "Введите номер телефона",
+    "groupSelect": "Выберите группу",
+    "addBtn": "Добавить студента",
+    "deleteBtn": "Удалить студента"
+  },
+  "student-subject": {
+    "name": "Название",
+    "studentSelect": "Выберите студента",
+    "subjectSelect": "Выберите предмет",
+    "addBtn": "Добавить предмет",
+    "deleteBtn": "Удалить предмет"
+  },
+  "subject": {
+    "id": "ИД",
+    "name": "Название",
+    "nameInput": "Введите название",
+    "addBtn": "Добавить предмет",
+    "deleteBtn": "Удалить предмет"
+  },
+  "teacher":{
+    "id": "ИД",
+    "name": "Имя",
+    "surname": "Фамилия",
+    "age": "Возраст",
+    "phone": "Номер Телефона",
+    "nameInput": "Введите имя",
+    "surnameInput": "Введите фамилию",
+    "ageInput": "Введите возраст",
+    "phoneInput": "Введите номер телефона",
+    "addBtn": "Добавить учителя",
+    "deleteBtn": "Удалить учителя"
+  },
+  "teacher-group": {
+    "name": "Название",
+    "teacherSelect": "Выберите Учителя",
+    "groupSelect": "Выберите группу",
+    "addBtn": "Добавить группу",
+    "deleteBtn": "Удалить группу"
+  },
+  "teacher-subject": {
+    "name": "Название",
+    "teacherSelect": "Выберите учителя",
+    "subjectSelect": "Выберите предмет",
+    "addBtn": "Добавить предмет",
+    "deleteBtn": "Удалить предмет"
+  },
+  "term":{
+    "id": "ИД",
+    "name": "Название",
+    "startDate": "Дата начала",
+    "endDate": "Дата окончания",
+    "closed": "Закрыт",
+    "nameInput": "Введите название",
+    "startDateInput": "Введите дату начала",
+    "endDateInput": "Введите дату окончания",
+    "addBtn": "Добавить семестр",
+    "deleteBtn": "Удалить семестр"
+  }
+}

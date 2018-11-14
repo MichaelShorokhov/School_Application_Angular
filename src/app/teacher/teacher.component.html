@@ -1,0 +1,47 @@
+<div class="row" style="margin-top: 28px;">
+
+    <div>
+    <table>
+    <tr>
+    <td class="table">
+
+    <table>
+      <tr>
+        <th i18n="@@id" [translate]="'teacher.id'">ID</th>
+        <th i18n="@@personName" [translate]="'teacher.name'">Name</th>
+        <th i18n="@@surname" [translate]="'teacher.surname'">Surname</th>
+        <th i18n="@@age" [translate]="'teacher.age'">Age</th>
+        <th i18n="@@phone" [translate]="'teacher.phone'">Phone Number</th>
+      </tr>
+      <tr *ngFor="let teacher of teachers">
+        <td>{{teacher.id}}</td>
+        <td><input [(ngModel)]="teacher.name" (change)="updateTeacher(teacher)" type="text" class="text"></td>
+        <td><input [(ngModel)]="teacher.surname" (change)="updateTeacher(teacher)" type="text" class="text"></td>
+        <td><input [(ngModel)]="teacher.age" (change)="updateTeacher(teacher)" type="number" class="numb"></td>
+        <td><input [(ngModel)]="teacher.phoneNumber" (change)="updateTeacher(teacher)" type="text" class="text"></td>
+        <td><button (click) = "deleteTeacher(teacher)" i18n="@@deleteTeacherBtn" [translate]="'teacher.deleteBtn'">Delete Teacher</button></td>
+      </tr>
+
+    </table>
+    </td>
+    <td class="input">
+        <div class="inputPanel">
+            <p><label i18n="@@teacherNameInput" [translate]="'teacher.nameInput'">Input Teacher Name </label>
+            <input type="text" [(ngModel)]="newTeacher.name" required class="text">
+            </p>
+            <p><label i18n="@@teacherSurnameInput" [translate]="'teacher.surnameInput'">Input Teacher Surname </label>
+            <input type="text" [(ngModel)]="newTeacher.surname" required class="text">
+            </p>
+            <p><label i18n="@@teacherAgeInput" [translate]="'teacher.ageInput'">Input Teacher Age </label>
+            <input type="number" [(ngModel)]="newTeacher.age" required class="numb">
+            </p>
+            <p><label i18n="@@teacherPhoneInput" [translate]="'teacher.phoneInput'">Input Teacher Phone Number </label>
+            <input type="text" [(ngModel)]="newTeacher.phoneNumber" required class="text">
+            </p>
+            <p><button (click)="addTeacher()" i18n="@@addTeacherBtn" [translate]="'teacher.addBtn'">Add Teacher</button></p>
+        </div>
+        </td>
+        </tr>
+        </table>
+      </div>
+    </div>

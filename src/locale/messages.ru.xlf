@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="id" datatype="html">
+        <source>ID</source>
+        <target>ИД</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/mark/mark.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/student/student.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/teacher/teacher.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/term/term.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/course/course.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/group/group.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/mark-for-lesson/mark-for-lesson.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/subject/subject.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/lesson/lesson.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="value" datatype="html">
+        <source>Value</source>
+        <target>Значение</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/mark/mark.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="deleteMarkBtn" datatype="html">
+        <source>Delete Mark</source>
+        <target>Удалить Оценку</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/mark/mark.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="markValueInput" datatype="html">
+        <source>Input Mark Value </source>
+        <target>Введите Значение Оценки </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/mark/mark.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="addMarkBtn" datatype="html">
+        <source>Add Mark</source>
+        <target>Добавить Оценку</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/mark/mark.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="personName" datatype="html">
+        <source>Name</source>
+        <target>Имя</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/student/student.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/teacher/teacher.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="surname" datatype="html">
+        <source>Surname</source>
+        <target>Фамилия</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/student/student.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/teacher/teacher.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="age" datatype="html">
+        <source>Age</source>
+        <target>Возраст</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/student/student.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/teacher/teacher.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="phone" datatype="html">
+        <source>Phone Number</source>
+        <target>Номер Телефона</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/student/student.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/teacher/teacher.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="group" datatype="html">
+        <source>Group</source>
+        <target>Группа</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/student/student.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/lesson/lesson.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="deleteStudentBtn" datatype="html">
+        <source>Delete Student</source>
+        <target>Удалить Студента</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/student/student.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="studentNameInput" datatype="html">
+        <source>Input Student Name </source>
+        <target>Введите Имя Студента </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/student/student.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="studentSurnameInput" datatype="html">
+        <source>Input Student Surname </source>
+        <target>Введите Фамилию Студента </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/student/student.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="studentAgeInput" datatype="html">
+        <source>Input Student Age </source>
+        <target>Введите Возраст Студента </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/student/student.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="studentPhoneInput" datatype="html">
+        <source>Input Student Phone Number </source>
+        <target>Введите Номер Телефона Студента </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/student/student.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="groupSelect" datatype="html">
+        <source>Select Group </source>
+        <target>Выберите Группу </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/student/student.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/lesson/lesson.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/teacher-group/teacher-group.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="addStudentBtn" datatype="html">
+        <source>Add Student</source>
+        <target>Добавить Студента</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/student/student.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="deleteTeacherBtn" datatype="html">
+        <source>Delete Teacher</source>
+        <target>Удалить Учителя</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/teacher/teacher.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="teacherNameInput" datatype="html">
+        <source>Input Teacher Name </source>
+        <target>Введите Имя Учителя </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/teacher/teacher.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="teacherSurnameInput" datatype="html">
+        <source>Input Teacher Surname </source>
+        <target>Введите Фамилию Учителя </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/teacher/teacher.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="teacherAgeInput" datatype="html">
+        <source>Input Teacher Age </source>
+        <target>Введите Возраст Учителя </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/teacher/teacher.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="teacherPhoneInput" datatype="html">
+        <source>Input Teacher Phone Number </source>
+        <target>Введите Номер Телефона Учителя </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/teacher/teacher.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="addTeacherBtn" datatype="html">
+        <source>Add Teacher</source>
+        <target>Добавить Учителя</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/teacher/teacher.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="name" datatype="html">
+        <source>Name</source>
+        <target>Название</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/term/term.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/group/group.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/subject/subject.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/teacher-group/teacher-group.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/teacher-subject/teacher-subject.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/student-subject/student-subject.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="startDate" datatype="html">
+        <source>Start Date</source>
+        <target>Дата Начала</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/term/term.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="endDate" datatype="html">
+        <source>End Date</source>
+        <target>Дата Окончания</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/term/term.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="isClosed" datatype="html">
+        <source>Is Closed</source>
+        <target>Закрыт</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/term/term.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="deleteTermBtn" datatype="html">
+        <source>Delete Term</source>
+        <target>Удалить Семестр</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/term/term.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="termNameInput" datatype="html">
+        <source>Input Term Name </source>
+        <target>Введите Название Семестра </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/term/term.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="termStartDateInput" datatype="html">
+        <source>Input Term Start Date </source>
+        <target>Введите Дату Начала Семестра </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/term/term.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="termEndDateInput" datatype="html">
+        <source>Input Term End Date </source>
+        <target>Введите Дату Окончания Семестра </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/term/term.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="addTermBtn" datatype="html">
+        <source>Add Term</source>
+        <target>Добавить Семестр</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/term/term.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="year" datatype="html">
+        <source>Year</source>
+        <target>Год</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/course/course.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="deleteCourseBtn" datatype="html">
+        <source>Delete Course</source>
+        <target>Удалить Курс</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/course/course.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="yearInput" datatype="html">
+        <source>Input Course Year </source>
+        <target>Введите Год Курса </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/course/course.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="addCourseBtn" datatype="html">
+        <source>Add Course</source>
+        <target>Добавить Курс</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/course/course.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="course" datatype="html">
+        <source>Course</source>
+        <target>Курс</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/group/group.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="deleteGroupBtn" datatype="html">
+        <source>Delete Group</source>
+        <target>Удалить Группу</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/group/group.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/teacher-group/teacher-group.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="groupNameInput" datatype="html">
+        <source>Input Group Name </source>
+        <target>Введите Название Группы </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/group/group.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="courseSelect" datatype="html">
+        <source>Select Course </source>
+        <target>Выберите Курс </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/group/group.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="addGroupBtn" datatype="html">
+        <source>Add Group</source>
+        <target>Добавить Группу</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/group/group.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/teacher-group/teacher-group.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="mark" datatype="html">
+        <source>Mark</source>
+        <target>Оценка</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/mark-for-lesson/mark-for-lesson.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="lesson" datatype="html">
+        <source>Lesson</source>
+        <target>Урок</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/mark-for-lesson/mark-for-lesson.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="student" datatype="html">
+        <source>Student</source>
+        <target>Студент</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/mark-for-lesson/mark-for-lesson.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="deleteMarkForLessonBtn" datatype="html">
+        <source>Delete MarkForLesson</source>
+        <target>Удалить Оценку</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/mark-for-lesson/mark-for-lesson.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="markSelect" datatype="html">
+        <source>Select Mark </source>
+        <target>Выберите Оценку </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/mark-for-lesson/mark-for-lesson.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="lessonSelect" datatype="html">
+        <source>Select Lesson </source>
+        <target>Выберите Урок </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/mark-for-lesson/mark-for-lesson.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="studentSelect" datatype="html">
+        <source>Select Student </source>
+        <target>Выберите Студента </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/mark-for-lesson/mark-for-lesson.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/student-subject/student-subject.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="addMarkForLessonBtn" datatype="html">
+        <source>Add Mark for Lesson</source>
+        <target>Добавить Оценку</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/mark-for-lesson/mark-for-lesson.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="deleteSubjectBtn" datatype="html">
+        <source>Delete Subject</source>
+        <target>Удалить Предмет</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/subject/subject.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/teacher-subject/teacher-subject.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/student-subject/student-subject.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="subjectNameInput" datatype="html">
+        <source>Input Subject Name </source>
+        <target>Введите Название Предмета</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/subject/subject.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="addSubjectBtn" datatype="html">
+        <source>Add Subject</source>
+        <target>Добавить Предмет</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/subject/subject.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/teacher-subject/teacher-subject.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/student-subject/student-subject.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="date" datatype="html">
+        <source>Date</source>
+        <target>Дата</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/lesson/lesson.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="subject" datatype="html">
+        <source>Subject</source>
+        <target>Предмет</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/lesson/lesson.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="term" datatype="html">
+        <source>Term</source>
+        <target>Семестр</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/lesson/lesson.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="teacher@" datatype="html">
+        <source>Teacher</source>
+        <target>Учитель</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/lesson/lesson.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="deleteLessonBtn" datatype="html">
+        <source>Delete Lesson</source>
+        <target>Удалить Урок</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/lesson/lesson.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="lessonDateInput" datatype="html">
+        <source>Input Lesson Date </source>
+        <target>Введите Дату Урока </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/lesson/lesson.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="891ff7d3e1fa91cb3eb228e08998a1e6a77cc158" datatype="html">
+        <source>Select Subject </source>
+        <target>Выберите Предмет </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/lesson/lesson.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+        <note priority="1" from="description">@subjectSelect</note>
+      </trans-unit>
+      <trans-unit id="termSelect" datatype="html">
+        <source>Select Term </source>
+        <target>Выберите Семестр </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/lesson/lesson.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="teacherSelect" datatype="html">
+        <source>Select Teacher </source>
+        <target>Выберите Учителя</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/lesson/lesson.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/teacher-group/teacher-group.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/teacher-subject/teacher-subject.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="addLessonBtn" datatype="html">
+        <source>Add Lesson</source>
+        <target>Добавить Урок</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/lesson/lesson.component.html</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title" datatype="html">
+        <source>School_Application</source>
+        <target>Программа для Школы</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/navigation/navigation.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="markTitle" datatype="html">
+        <source>Marks</source>
+        <target>Оценки</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/navigation/navigation.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="studentTitle" datatype="html">
+        <source>Students</source>
+        <target>Студенты</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/navigation/navigation.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="teacherTitle" datatype="html">
+        <source>Teachers</source>
+        <target>Учителя</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/navigation/navigation.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="subjectTitle" datatype="html">
+        <source>Subjects</source>
+        <target>Предметы</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/navigation/navigation.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="termTitle" datatype="html">
+        <source>Terms</source>
+        <target>Семестры</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/navigation/navigation.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="courseTitle" datatype="html">
+        <source>Courses</source>
+        <target>Курсы</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/navigation/navigation.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="groupTitle" datatype="html">
+        <source>Groups</source>
+        <target>Группы</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/navigation/navigation.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="lessonTitle" datatype="html">
+        <source>Lessons</source>
+        <target>Уроки</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/navigation/navigation.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="listOfMarksTitle" datatype="html">
+        <source>List of Marks</source>
+        <target>Список Оценок</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/navigation/navigation.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="teacherGroupTitle" datatype="html">
+        <source>Teachers in Groups</source>
+        <target>Учителя по Группам</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/navigation/navigation.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="teacherSubjectTitle" datatype="html">
+        <source>Teachers in Subjects</source>
+        <target>Учителя по Предметам</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/navigation/navigation.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="studentSubjectTitle" datatype="html">
+        <source>Students in Subjects</source>
+        <target>Студенты по Предметам</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/navigation/navigation.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="subjectSelect" datatype="html">
+        <source>Select Subject </source>
+        <target>Выберите Предмет </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/teacher-subject/teacher-subject.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/student-subject/student-subject.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>

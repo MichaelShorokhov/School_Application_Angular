@@ -1,0 +1,56 @@
+<div class="row" style="margin-top: 28px;">
+
+    <div>
+    <table>
+    <tr>
+    <td class="table">
+
+    <table>
+      <tr>
+        <th i18n="@@id" [translate]="'student.id'">ID</th>
+        <th i18n="@@personName" [translate]="'student.name'">Name</th>
+        <th i18n="@@surname" [translate]="'student.surname'">Surname</th>
+        <th i18n="@@age" [translate]="'student.age'">Age</th>
+        <th i18n="@@phone" [translate]="'student.phone'">Phone Number</th>
+        <th i18n="@@group" [translate]="'student.group'">Group</th>
+      </tr>
+      <tr *ngFor="let student of students">
+        <td>{{student.id}}</td>
+        <td><input [(ngModel)]="student.name" (change)="updateStudent(student)" type="text" class="text"></td>
+        <td><input [(ngModel)]="student.surname" (change)="updateStudent(student)" type="text" class="text"></td>
+        <td><input [(ngModel)]="student.age" (change)="updateStudent(student)" type="number" class="numb"></td>
+        <td><input [(ngModel)]="student.phoneNumber" (change)="updateStudent(student)" type="text" class="text"></td>
+        <td>
+          <select [compareWith]="compareById" [(ngModel)]="student.group" (change)=updateStudent(student) >
+              <option *ngFor="let group of groups" [ngValue]="group">{{group.name}}</option>
+          </select>
+        </td>
+        <td><button (click) = "deleteStudent(student)" i18n="@@deleteStudentBtn" [translate]="'student.deleteBtn'">Delete Student</button></td>
+      </tr>
+    </table>
+    </td>
+    <td class="input">
+        <div class="inputPanel">
+        <p><label i18n="@@studentNameInput" [translate]="'student.nameInput'">Input Student Name </label>
+                           <input type="text" [(ngModel)]="newStudent.name" required class="text">
+                           </p>
+        <p><label i18n="@@studentSurnameInput" [translate]="'student.surnameInput'">Input Student Surname </label>
+                           <input type="text" [(ngModel)]="newStudent.surname" required class="text">
+                           </p>
+        <p><label i18n="@@studentAgeInput" [translate]="'student.ageInput'">Input Student Age </label>
+                           <input type="number" [(ngModel)]="newStudent.age" required class="numb">
+                           </p>
+        <p><label i18n="@@studentPhoneInput" [translate]="'student.phoneInput'">Input Student Phone Number </label>
+                           <input type="text" [(ngModel)]="newStudent.phoneNumber" required class="text">
+                           </p>
+        <p><label i18n="@@groupSelect" [translate]="'student.groupSelect'">Select Group </label>
+                     <select [(ngModel)]="newStudent.group" required class="selct">
+                         <option *ngFor="let group of groups" [ngValue]="group">{{group.name}}</option>
+                     </select></p>
+        <p><button (click)="addStudent()" i18n="@@addStudentBtn" [translate]="'student.addBtn'">Add Student</button></p>
+        </div>
+    </td>
+    </tr>
+    </table>
+      </div>
+    </div>

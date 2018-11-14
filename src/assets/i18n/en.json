@@ -1,0 +1,134 @@
+{
+  "nav":{
+    "marks": "Marks",
+    "title": "School application",
+    "students": "Students",
+    "teachers": "Teachers",
+    "subjects": "Subjects",
+    "terms": "Terms",
+    "courses": "Courses",
+    "groups": "Groups",
+    "lessons": "Lessons",
+    "listOfMarks": "List of marks",
+    "teachersInGroups": "Groups by teacher",
+    "teachersInSubjects": "Subjects by teacher",
+    "studentsInSubjects": "Subjects by student"
+  },
+  "course": {
+    "id": "ID",
+    "year": "Year",
+    "yearInput": "Input year",
+    "addBtn": "Add course",
+    "deleteBtn": "Delete course"
+  },
+  "group": {
+    "id": "ID",
+    "name": "Name",
+    "course": "Course",
+    "nameInput": "Input name",
+    "courseSelect": "Select course",
+    "addBtn": "Add group",
+    "deleteBtn": "Delete group"
+  },
+  "lesson": {
+    "id": "ID",
+    "date": "Date",
+    "group": "Group",
+    "teacher": "Teacher",
+    "term": "Term",
+    "subject": "Subject",
+    "dateInput": "Input Date",
+    "groupSelect": "Select group",
+    "teacherSelect": "Select teacher",
+    "termSelect": "Select term",
+    "subjectSelect": "Select subject",
+    "addBtn": "Add lesson",
+    "deleteBtn": "Delete lesson"
+  },
+  "mark": {
+    "id": "ID",
+    "value": "Value",
+    "valueInput": "Input value",
+    "addBtn": "Add mark",
+    "deleteBtn": "Delete mark"
+  },
+  "markForLesson": {
+    "id": "ID",
+    "mark": "Mark",
+    "lesson": "Lesson",
+    "student": "Student",
+    "markSelect": "Select mark",
+    "studentSelect": "Select student",
+    "lessonSelect": "Select lesson",
+    "addBtn": "Add mark to list",
+    "deleteBtn": "Delete mark"
+  },
+  "student":{
+    "id": "ID",
+    "name": "name",
+    "surname": "Surname",
+    "age": "Age",
+    "phone": "Phone number",
+    "group": "Group",
+    "nameInput": "Input name",
+    "surnameInput": "Input surname",
+    "ageInput": "Input age",
+    "phoneInput": "Input phone number",
+    "groupSelect": "Select group",
+    "addBtn": "Add student",
+    "deleteBtn": "Delete student"
+  },
+  "student-subject": {
+    "name": "Name",
+    "studentSelect": "Select student",
+    "subjectSelect": "Select subject",
+    "addBtn": "Add subject",
+    "deleteBtn": "Delete subject"
+  },
+  "subject": {
+    "id": "ID",
+    "name": "Name",
+    "nameInput": "Input name",
+    "addBtn": "Add subject",
+    "deleteBtn": "Delete subject"
+  },
+  "teacher":{
+    "id": "ID",
+    "name": "Name",
+    "surname": "Surname",
+    "age": "Age",
+    "phone": "Phone number",
+    "nameInput": "Input name",
+    "surnameInput": "Input surname",
+    "ageInput": "Input age",
+    "phoneInput": "Input phone number",
+    "addBtn": "Add teacher",
+    "deleteBtn": "Delete teacher"
+  },
+  "teacher-group": {
+    "name": "Name",
+    "teacherSelect": "Select teacher",
+    "groupSelect": "Select group",
+    "addBtn": "Add group",
+    "deleteBtn": "Delete group"
+  },
+  "teacher-subject": {
+    "name": "Name",
+    "teacherSelect": "Select teacher",
+    "subjectSelect": "Select subject",
+    "addBtn": "Add subject",
+    "deleteBtn": "Delete subject"
+  },
+  "term":{
+    "id": "ID",
+    "name": "Name",
+    "startDate": "Start date",
+    "endDate": "End date",
+    "closed": "Is closed",
+    "nameInput": "Input name",
+    "startDateInput": "Input start date",
+    "endDateInput": "Input end date",
+    "addBtn": "Add term",
+    "deleteBtn": "Delete term"
+  }
+}

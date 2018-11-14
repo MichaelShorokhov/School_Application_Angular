@@ -1,0 +1,41 @@
+<div class="row" style="margin-top: 28px;">
+
+    <div>
+    <table>
+    <tr>
+    <td class="table">
+
+    <table>
+      <tr>
+        <th i18n="@@id" [translate]="'group.id'">ID</th>
+        <th i18n="@@name" [translate]="'group.name'">Name</th>
+        <th i18n="@@course" [translate]="'group.course'">Course</th>
+      </tr>
+      <tr *ngFor="let group of groups">
+        <td>{{group.id}}</td>
+        <td><input [(ngModel)]="group.name" (change)="updateGroup(group)" type="text" class="text"></td>
+        <td>
+          <select [compareWith] = "compareById" [(ngModel)]="group.course" (change)=updateGroup(group) >
+              <option *ngFor="let course of courses" [ngValue]="course">{{course.year}}</option>
+          </select>
+        </td>
+        <th><button (click) = "deleteGroup(group)" i18n="@@deleteGroupBtn" [translate]="'group.deleteBtn'">Delete Group</button></th>
+      </tr>
+
+    </table>
+    </td>
+    <td class="input">
+    <div class="inputPanel">
+        <p><label i18n="@@groupNameInput" [translate]="'group.nameInput'">Input Group Name </label>
+                           <input type="text" [(ngModel)]="newGroup.name" required class="text"></p>
+        <p><label i18n="@@courseSelect" [translate]="'group.courseSelect'">Select Course </label>
+            <select [(ngModel)]="newGroup.course" class="selct" required>
+                         <option *ngFor="let course of courses" [ngValue]="course">{{course.year}}</option>
+                     </select></p>
+        <p><button (click)="addGroup()" i18n="@@addGroupBtn" [translate]="'group.addBtn'">Add Group</button></p>
+    </div>
+    </td>
+    </tr>
+    </table>
+      </div>
+    </div>

@@ -1,0 +1,61 @@
+<div class="row" style="margin-top: 28px;">
+    <div>
+    <table>
+    <tr>
+    <td class="table">
+    <table>
+      <tr>
+        <th i18n="@@id" [translate]="'markForLesson.id'">ID</th>
+        <th i18n="@@mark" [translate]="'markForLesson.mark'">Mark</th>
+        <th i18n="@@lesson" [translate]="'markForLesson.lesson'">Lesson</th>
+        <th i18n="@@student" [translate]="'markForLesson.student'">Student</th>
+      </tr>
+      <tr *ngFor="let markForLesson of markForLessons">
+        <td>{{markForLesson.id}}</td>
+        <td>
+          <select [compareWith]="compareById" [(ngModel)]="markForLesson.mark" (change)=updateMarkForLesson(markForLesson) >
+              <option *ngFor="let mark of marks" [ngValue]="mark">{{mark.value}}</option>
+          </select>
+        </td>
+        <td>
+          <select [compareWith]="compareById" [(ngModel)]="markForLesson.lesson" (change)=updateMarkForLesson(markForLesson) >
+              <option *ngFor="let lesson of lessons" [ngValue]="lesson">
+              {{lesson.subject.name}} {{lesson.teacher.surname}} {{lesson.teacher.name}} {{lesson.date}}</option>
+          </select>
+        </td>
+        <td>
+          <select [compareWith]="compareById" [(ngModel)]="markForLesson.student" (change)=updateMarkForLesson(markForLesson) >
+              <option *ngFor="let student of students" [ngValue]="student">{{student.name}} {{student.surname}}</option>
+          </select>
+        </td>
+        <td><button (click) = "deleteMarkForLesson(markForLesson)" i18n="@@deleteMarkForLessonBtn" [translate]="'markForLesson.deleteBtn'">Delete MarkForLesson</button></td>
+      </tr>
+
+    </table>
+    </td>
+    <td class="input">
+    <div class="inputPanel">
+            <p><label i18n="@@markSelect" [translate]="'markForLesson.markSelect'">Select Mark </label>
+            <select [(ngModel)]="newMarkForLesson.mark" required class="selct">
+                             <option *ngFor="let mark of marks" [ngValue]="mark">{{mark.value}}</option>
+                         </select>
+                         </p>
+            <p><label i18n="@@lessonSelect" [translate]="'markForLesson.lessonSelect'">Select Lesson </label>
+            <select [(ngModel)]="newMarkForLesson.lesson" required class="selct">
+                             <option *ngFor="let lesson of lessons" [ngValue]="lesson">
+                             {{lesson.subject.name}} {{lesson.teacher.name}} {{lesson.teacher.surname}} {{lesson.date}}</option>
+                         </select>
+                         </p>
+            <p><label i18n="@@studentSelect" [translate]="'markForLesson.studentSelect'">Select Student </label>
+            <select [(ngModel)]="newMarkForLesson.student" required class="selct">
+                             <option *ngFor="let student of students" [ngValue]="student">{{student.name}} {{student.surname}}</option>
+                         </select>
+                         </p>
+
+            <p><button (click)="addMarkForLesson()" i18n="@@addMarkForLessonBtn" [translate]="'markForLesson.addBtn'">Add Mark for Lesson</button></p>
+        </div>
+        </td>
+        </tr>
+        </table>
+      </div>
+    </div>

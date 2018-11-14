@@ -1,0 +1,75 @@
+<div class="row" style="margin-top: 28px;">
+    <div>
+    <table>
+    <tr>
+    <td class="table">
+
+    <table>
+      <tr>
+        <th i18n="@@id" [translate]="'lesson.id'">ID</th>
+        <th i18n="@@date" [translate]="'lesson.date'">Date</th>
+        <th i18n="@@subject" [translate]="'lesson.subject'">Subject</th>
+        <th i18n="@@term" [translate]="'lesson.term'">Term</th>
+        <th i18n="@@teacher@" [translate]="'lesson.teacher'">Teacher</th>
+        <th i18n="@@group" [translate]="'lesson.group'">Group</th>
+      </tr>
+      <tr *ngFor="let lesson of lessons">
+        <td>{{lesson.id}}</td>
+        <td><input [ngModel]="lesson.date | date:'yyyy-MM-dd'" (ngModelChange)="lesson.date=$event" (change)="updateLesson(lesson)" type="date" class="text"></td>
+        <td>
+          <select [compareWith]="compareById" [(ngModel)]="lesson.subject" (change)=updateLesson(lesson) >
+              <option *ngFor="let subject of subjects" [ngValue]="subject">{{subject.name}}</option>
+          </select>
+        </td>
+        <td>
+          <select [compareWith]="compareById" [(ngModel)]="lesson.term" (change)=updateLesson(lesson) >
+              <option *ngFor="let term of terms" [ngValue]="term">{{term.name}}</option>
+          </select>
+        </td>
+        <td>
+          <select [compareWith]="compareById" [(ngModel)]="lesson.teacher" (change)=updateLesson(lesson) >
+              <option *ngFor="let teacher of teachers" [ngValue]="teacher">{{teacher.name}} {{teacher.surname}}</option>
+          </select>
+        </td>
+        <td>
+          <select [compareWith]="compareById" [(ngModel)]="lesson.group" (change)=updateLesson(lesson) >
+              <option *ngFor="let group of groups" [ngValue]="group">{{group.name}}</option>
+          </select>
+        </td>
+        <td><button (click) = "deleteLesson(lesson)" i18n="@@deleteLessonBtn" [translate]="'lesson.deleteBtn'">Delete Lesson</button></td>
+      </tr>
+
+    </table>
+    </td>
+    <td class="input">
+    <div class="inputPanel">
+        <p><label i18n="@@lessonDateInput" [translate]="'lesson.dateInput'">Input Lesson Date </label>
+                           <input type="date" [(ngModel)]="newLesson.date" required class="text">
+                           </p>
+        <p><label i18n="@subjectSelect" [translate]="'lesson.subjectSelect'">Select Subject </label>
+        <select [(ngModel)]="newLesson.subject" required class="selct">
+                         <option *ngFor="let subject of subjects" [ngValue]="subject">{{subject.name}}</option>
+                     </select>
+                     </p>
+        <p><label i18n="@@termSelect" [translate]="'lesson.termSelect'">Select Term </label>
+        <select [(ngModel)]="newLesson.term" required class="selct">
+                         <option *ngFor="let term of terms" [ngValue]="term">{{term.name}}</option>
+                     </select>
+                     </p>
+        <p><label i18n="@@teacherSelect" [translate]="'lesson.teacherSelect'">Select Teacher </label>
+        <select [(ngModel)]="newLesson.teacher" required class="selct">
+                         <option *ngFor="let teacher of teachers" [ngValue]="teacher">{{teacher.name}} {{teacher.surname}}</option>
+                     </select>
+                     </p>
+        <p><label i18n="@@groupSelect" [translate]="'lesson.groupSelect'">Select Group </label>
+        <select [(ngModel)]="newLesson.group" required class="selct">
+                         <option *ngFor="let group of groups" [ngValue]="group">{{group.name}}</option>
+                     </select>
+                     </p>
+        <p><button (click)="addLesson()" i18n="@@addLessonBtn" [translate]="'lesson.addBtn'">Add Lesson</button></p>
+    </div>
+    </td>
+    </tr>
+    </table>
+      </div>
+    </div>

@@ -1,0 +1,30 @@
+<div class="row" style="margin-top: 28px;">
+
+    <div>
+    <table>
+    <tr>
+    <td class="table">
+
+    <table>
+      <tr>
+        <th i18n="@@id" [translate]="'subject.id'">ID</th>
+        <th i18n="@@name" [translate]="'subject.name'">Name</th>
+      </tr>
+      <tr *ngFor="let subject of subjects">
+        <td>{{subject.id}}</td>
+        <td><input [(ngModel)]="subject.name" (change)="updateSubject(subject)" type="text" class="text"></td>
+        <td><button (click) = "deleteSubject(subject)" i18n="@@deleteSubjectBtn" [translate]="'subject.deleteBtn'">Delete Subject</button></td>
+      </tr>
+    </table>
+    </td>
+    <td class="input">
+        <div class="inputPanel">
+          <p><label i18n="@@subjectNameInput" [translate]="'subject.nameInput'">Input Subject Name </label>
+          <input type="text" [(ngModel)]="newSubject.name" required class="text"></p>
+          <p><button (click)="addSubject()" i18n="@@addSubjectBtn" [translate]="'subject.addBtn'">Add Subject</button></p>
+        </div>
+        </td>
+        </tr>
+        </table>
+      </div>
+    </div>

@@ -1,0 +1,34 @@
+<div class="row" style="margin-top: 28px;">
+
+    <div>
+    <table>
+    <tr>
+    <td class="table">
+    <table>
+      <tr>
+        <th i18n="@@id" [translate]="'mark.id'">ID</th>
+        <th i18n="@@value" [translate]="'mark.value'">Value</th>
+      </tr>
+      <tr *ngFor="let mark of marks">
+        <td>{{mark.id}}</td>
+        <td><input [(ngModel)]="mark.value" (change)="updateMark(mark)" type="text" class="text"></td>
+        <td><button (click) = "deleteMark(mark)" i18n="@@deleteMarkBtn" [translate]="'mark.deleteBtn'">Delete Mark</button></td>
+      </tr>
+    </table>
+          </td>
+         <td class="input">
+            <div class="inputPanel">
+            <p><label i18n="@@markValueInput" [translate]="'mark.valueInput'">Input Mark Value </label>
+            <input type="text" [(ngModel)]="newMark.value" required class="text"></p>
+            <p><button (click)="addMark()" i18n="@@addMarkBtn" [translate]="'mark.addBtn'">Add Mark</button></p>
+        </div>
+        </td>
+        </tr>
+        </table>
+      </div>
+  </div>
+
+
+
+
+

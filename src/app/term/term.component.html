@@ -1,0 +1,41 @@
+<div class="row" style="margin-top: 28px;">
+
+    <div>
+    <table>
+    <tr>
+    <td class="table">
+
+    <table>
+      <tr>
+        <th i18n="@@id" [translate]="'term.id'">ID</th>
+        <th i18n="@@name" [translate]="'term.name'">Name</th>
+        <th i18n="@@startDate" [translate]="'term.startDate'">Start Date</th>
+        <th i18n="@@endDate" [translate]="'term.endDate'">End Date</th>
+        <th i18n="@@isClosed" [translate]="'term.closed'">Is Closed</th>
+      </tr>
+      <tr *ngFor="let term of terms">
+        <td>{{term.id}}</td>
+        <td><input [(ngModel)]="term.name" (change)="updateTerm(term)" type="text" class="text"></td>
+        <td><input [ngModel]="term.startDate|date:'yyyy-MM-dd'" (ngModelChange)="term.startDate=$event" (change)="updateTerm(term)" type="date"></td>
+        <td><input [ngModel]="term.endDate|date:'yyyy-MM-dd'" (ngModelChange)="term.endDate=$event" (change)="updateTerm(term)" type="date"></td>
+        <td><input type="checkbox" [ngModel]="term.closed" (change)="closeTerm(term)"></td>
+        <td><button (click) = "deleteTerm(term)" i18n="@@deleteTermBtn" [translate]="'term.deleteBtn'">Delete Term</button></td>
+      </tr>
+
+    </table>
+    </td>
+    <td class="input">
+    <div class="inputPanel">
+        <p><label i18n="@@termNameInput" [translate]="'term.nameInput'">Input Term Name </label>
+                           <input type="text" [(ngModel)]="newTerm.name" required class="text"></p>
+        <p><label i18n="@@termStartDateInput" [translate]="'term.startDateInput'">Input Term Start Date </label>
+                           <input type="date" [(ngModel)]="newTerm.startDate" required></p>
+        <p><label i18n="@@termEndDateInput" [translate]="'term.endDateInput'">Input Term End Date </label>
+                           <input type="date" [(ngModel)]="newTerm.endDate" required></p>
+        <button (click)="addTerm()" i18n="@@addTermBtn" [translate]="'term.addBtn'">Add Term</button>
+    </div>
+    </td>
+    </tr>
+    </table>
+      </div>
+    </div>

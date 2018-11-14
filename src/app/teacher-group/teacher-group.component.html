@@ -1,0 +1,30 @@
+<div class="row" style="margin-top: 28px;">
+        <table>
+        <tr>
+        <td class="table">
+      <label i18n="@@teacherSelect" [translate]="'teacher-group.teacherSelect'">Select Teacher </label>
+      <select [(ngModel)]="selectedTeacher" (change)="getGroupsByTeacher(selectedTeacher)" class="selct">
+          <option *ngFor="let teacher of teachers" [ngValue]="teacher">{{teacher.name}} {{teacher.surname}}</option>
+      </select>
+    <table *ngIf="groupsByTeacher.length!=0" class="table">
+      <tr>
+        <th i18n="@@name" [translate]="'teacher-group.name'">Name</th>
+      </tr>
+      <tr *ngFor="let group of groupsByTeacher" >
+        <td>{{group.name}}</td>
+        <td><button (click) = "removeGroup(group)" i18n="@@deleteGroupBtn" [translate]="'teacher-group.deleteBtn'">Delete Group</button></td>
+      </tr>
+    </table>
+      </td>
+    <td class="input">
+    <div *ngIf="selectedTeacher!=null" class="inputPanel">
+        <p><label i18n="@@groupSelect" [translate]="'teacher-group.groupSelect'">Select Group </label>
+                     <select [(ngModel)]="selectedGroup" required class="selct">
+                         <option *ngFor="let group of groups" [ngValue]="group">{{group.name}}</option>
+                     </select></p>
+        <p><button (click)="addGroup()" i18n="@@addGroupBtn" [translate]="'teacher-group.addBtn'">Add Group</button></p>
+    </div>
+      </td>
+     </tr>
+    </table>
+ </div>

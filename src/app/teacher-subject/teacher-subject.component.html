@@ -1,0 +1,30 @@
+<div class="row" style="margin-top: 28px;">
+        <table>
+        <tr>
+        <td class="table">
+      <label i18n="@@teacherSelect" [translate]="'teacher-subject.teacherSelect'">Select Teacher </label>
+      <select [(ngModel)]="selectedTeacher" (change)="getSubjectsByTeacher(selectedTeacher)" class="selct">
+          <option *ngFor="let teacher of teachers" [ngValue]="teacher">{{teacher.name}} {{teacher.surname}}</option>
+      </select>
+    <table *ngIf="subjectsByTeacher.length!=0" class="table">
+      <tr>
+        <th i18n="@@name" [translate]="'teacher-subject.name'">Name</th>
+      </tr>
+      <tr *ngFor="let subject of subjectsByTeacher" >
+        <td>{{subject.name}}</td>
+        <td><button (click) = "removeSubject(subject)" i18n="@@deleteSubjectBtn" [translate]="'teacher-subject.deleteBtn'">Delete Subject</button></td>
+      </tr>
+    </table>
+  </td>
+    <td class="input">
+    <div *ngIf="selectedTeacher!=null" class="inputPanel">
+        <p><label i18n="@@subjectSelect" [translate]="'teacher-subject.subjectSelect'">Select Subject </label>
+                     <select [(ngModel)]="selectedSubject" required class="selct">
+                         <option *ngFor="let subject of subjects" [ngValue]="subject">{{subject.name}}</option>
+                     </select></p>
+        <p><button (click)="addSubject()" i18n="@@addSubjectBtn" [translate]="'teacher-subject.addBtn'">Add Subject</button></p>
+    </div>
+      </td>
+     </tr>
+    </table>
+ </div>

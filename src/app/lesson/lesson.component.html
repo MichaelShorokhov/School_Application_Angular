@@ -15,28 +15,29 @@
       </tr>
       <tr *ngFor="let lesson of lessons">
         <td>{{lesson.id}}</td>
-        <td><input [ngModel]="lesson.date | date:'yyyy-MM-dd'" (ngModelChange)="lesson.date=$event" (change)="updateLesson(lesson)" type="date" class="text"></td>
+        <td><input [ngModel]="lesson.date | date:'yyyy-MM-dd'" (ngModelChange)="lesson.date=$event" type="date" class="text"></td>
         <td>
-          <select [compareWith]="compareById" [(ngModel)]="lesson.subject" (change)=updateLesson(lesson) >
+          <select [compareWith]="compareById" [(ngModel)]="lesson.subject">
               <option *ngFor="let subject of subjects" [ngValue]="subject">{{subject.name}}</option>
           </select>
         </td>
         <td>
-          <select [compareWith]="compareById" [(ngModel)]="lesson.term" (change)=updateLesson(lesson) >
+          <select [compareWith]="compareById" [(ngModel)]="lesson.term">
               <option *ngFor="let term of terms" [ngValue]="term">{{term.name}}</option>
           </select>
         </td>
         <td>
-          <select [compareWith]="compareById" [(ngModel)]="lesson.teacher" (change)=updateLesson(lesson) >
+          <select [compareWith]="compareById" [(ngModel)]="lesson.teacher">
               <option *ngFor="let teacher of teachers" [ngValue]="teacher">{{teacher.name}} {{teacher.surname}}</option>
           </select>
         </td>
         <td>
-          <select [compareWith]="compareById" [(ngModel)]="lesson.group" (change)=updateLesson(lesson) >
+          <select [compareWith]="compareById" [(ngModel)]="lesson.group">
               <option *ngFor="let group of groups" [ngValue]="group">{{group.name}}</option>
           </select>
         </td>
         <td><button (click) = "deleteLesson(lesson)" i18n="@@deleteLessonBtn" [translate]="'lesson.deleteBtn'">Delete Lesson</button></td>
+        <td><button (click) = "updateLesson(lesson)" i18n="@@updateLessonBtn" [translate]="'lesson.updateBtn'">Update Lesson</button></td>
       </tr>
 
     </table>

@@ -16,16 +16,17 @@
       </tr>
       <tr *ngFor="let student of students">
         <td>{{student.id}}</td>
-        <td><input [(ngModel)]="student.name" (change)="updateStudent(student)" type="text" class="text"></td>
-        <td><input [(ngModel)]="student.surname" (change)="updateStudent(student)" type="text" class="text"></td>
-        <td><input [(ngModel)]="student.age" (change)="updateStudent(student)" type="number" class="numb"></td>
-        <td><input [(ngModel)]="student.phoneNumber" (change)="updateStudent(student)" type="text" class="text"></td>
+        <td><input [(ngModel)]="student.name" type="text" class="text"></td>
+        <td><input [(ngModel)]="student.surname" type="text" class="text"></td>
+        <td><input [(ngModel)]="student.age" type="number" class="numb"></td>
+        <td><input [(ngModel)]="student.phoneNumber" type="text" class="text"></td>
         <td>
-          <select [compareWith]="compareById" [(ngModel)]="student.group" (change)=updateStudent(student) >
+          <select [compareWith]="compareById" [(ngModel)]="student.group" >
               <option *ngFor="let group of groups" [ngValue]="group">{{group.name}}</option>
           </select>
         </td>
         <td><button (click) = "deleteStudent(student)" i18n="@@deleteStudentBtn" [translate]="'student.deleteBtn'">Delete Student</button></td>
+        <td><button (click) = "updateStudent(student)" i18n="@@updateStudentBtn" [translate]="'student.updateBtn'">Update Student</button></td>
       </tr>
     </table>
     </td>

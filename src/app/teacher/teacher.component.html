@@ -15,11 +15,12 @@
       </tr>
       <tr *ngFor="let teacher of teachers">
         <td>{{teacher.id}}</td>
-        <td><input [(ngModel)]="teacher.name" (change)="updateTeacher(teacher)" type="text" class="text"></td>
-        <td><input [(ngModel)]="teacher.surname" (change)="updateTeacher(teacher)" type="text" class="text"></td>
-        <td><input [(ngModel)]="teacher.age" (change)="updateTeacher(teacher)" type="number" class="numb"></td>
-        <td><input [(ngModel)]="teacher.phoneNumber" (change)="updateTeacher(teacher)" type="text" class="text"></td>
+        <td><input [(ngModel)]="teacher.name" type="text" class="text"></td>
+        <td><input [(ngModel)]="teacher.surname" type="text" class="text"></td>
+        <td><input [(ngModel)]="teacher.age" type="number" class="numb"></td>
+        <td><input [(ngModel)]="teacher.phoneNumber" type="text" class="text"></td>
         <td><button (click) = "deleteTeacher(teacher)" i18n="@@deleteTeacherBtn" [translate]="'teacher.deleteBtn'">Delete Teacher</button></td>
+        <td><button (click) = "updateTeacher(teacher)" i18n="@@updateTeacherBtn" [translate]="'teacher.updateBtn'">Update Teacher</button></td>
       </tr>
 
     </table>

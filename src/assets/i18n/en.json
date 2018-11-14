@@ -18,8 +18,9 @@
     "id": "ID",
     "year": "Year",
     "yearInput": "Input year",
-    "addBtn": "Add course",
-    "deleteBtn": "Delete course"
+    "addBtn": "Add",
+    "deleteBtn": "Delete",
+    "updateBtn": "Update"
   },
   "group": {
     "id": "ID",
@@ -27,8 +28,9 @@
     "course": "Course",
     "nameInput": "Input name",
     "courseSelect": "Select course",
-    "addBtn": "Add group",
-    "deleteBtn": "Delete group"
+    "addBtn": "Add",
+    "deleteBtn": "Delete",
+    "updateBtn": "Update"
   },
   "lesson": {
     "id": "ID",
@@ -42,15 +44,17 @@
     "teacherSelect": "Select teacher",
     "termSelect": "Select term",
     "subjectSelect": "Select subject",
-    "addBtn": "Add lesson",
-    "deleteBtn": "Delete lesson"
+    "addBtn": "Add",
+    "deleteBtn": "Delete",
+    "updateBtn": "Update"
   },
   "mark": {
     "id": "ID",
     "value": "Value",
     "valueInput": "Input value",
-    "addBtn": "Add mark",
-    "deleteBtn": "Delete mark"
+    "addBtn": "Add",
+    "deleteBtn": "Delete",
+    "updateBtn": "Update"
   },
   "markForLesson": {
     "id": "ID",
@@ -60,8 +64,9 @@
     "markSelect": "Select mark",
     "studentSelect": "Select student",
     "lessonSelect": "Select lesson",
-    "addBtn": "Add mark to list",
-    "deleteBtn": "Delete mark"
+    "addBtn": "Add",
+    "deleteBtn": "Delete",
+    "updateBtn": "Update"
   },
   "student":{
     "id": "ID",
@@ -75,8 +80,9 @@
     "ageInput": "Input age",
     "phoneInput": "Input phone number",
     "groupSelect": "Select group",
-    "addBtn": "Add student",
-    "deleteBtn": "Delete student"
+    "addBtn": "Add",
+    "deleteBtn": "Delete",
+    "updateBtn": "Update"
   },
   "student-subject": {
     "name": "Name",
@@ -89,8 +95,9 @@
     "id": "ID",
     "name": "Name",
     "nameInput": "Input name",
-    "addBtn": "Add subject",
-    "deleteBtn": "Delete subject"
+    "addBtn": "Add",
+    "deleteBtn": "Delete",
+    "updateBtn": "Update"
   },
   "teacher":{
     "id": "ID",
@@ -102,8 +109,9 @@
     "surnameInput": "Input surname",
     "ageInput": "Input age",
     "phoneInput": "Input phone number",
-    "addBtn": "Add teacher",
-    "deleteBtn": "Delete teacher"
+    "addBtn": "Add",
+    "deleteBtn": "Delete",
+    "updateBtn": "Update"
   },
   "teacher-group": {
     "name": "Name",
@@ -128,7 +136,8 @@
     "nameInput": "Input name",
     "startDateInput": "Input start date",
     "endDateInput": "Input end date",
-    "addBtn": "Add term",
-    "deleteBtn": "Delete term"
+    "addBtn": "Add",
+    "deleteBtn": "Delete",
+    "updateBtn": "Update"
   }
 }

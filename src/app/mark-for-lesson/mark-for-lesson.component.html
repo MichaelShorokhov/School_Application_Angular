@@ -13,22 +13,23 @@
       <tr *ngFor="let markForLesson of markForLessons">
         <td>{{markForLesson.id}}</td>
         <td>
-          <select [compareWith]="compareById" [(ngModel)]="markForLesson.mark" (change)=updateMarkForLesson(markForLesson) >
+          <select [compareWith]="compareById" [(ngModel)]="markForLesson.mark">
               <option *ngFor="let mark of marks" [ngValue]="mark">{{mark.value}}</option>
           </select>
         </td>
         <td>
-          <select [compareWith]="compareById" [(ngModel)]="markForLesson.lesson" (change)=updateMarkForLesson(markForLesson) >
+          <select [compareWith]="compareById" [(ngModel)]="markForLesson.lesson">
               <option *ngFor="let lesson of lessons" [ngValue]="lesson">
               {{lesson.subject.name}} {{lesson.teacher.surname}} {{lesson.teacher.name}} {{lesson.date}}</option>
           </select>
         </td>
         <td>
-          <select [compareWith]="compareById" [(ngModel)]="markForLesson.student" (change)=updateMarkForLesson(markForLesson) >
+          <select [compareWith]="compareById" [(ngModel)]="markForLesson.student">
               <option *ngFor="let student of students" [ngValue]="student">{{student.name}} {{student.surname}}</option>
           </select>
         </td>
         <td><button (click) = "deleteMarkForLesson(markForLesson)" i18n="@@deleteMarkForLessonBtn" [translate]="'markForLesson.deleteBtn'">Delete MarkForLesson</button></td>
+        <td><button (click) = "updateMarkForLesson(markForLesson)" i18n="@@updateMarkForLessonBtn" [translate]="'markForLesson.updateBtn'">Update MarkForLesson</button></td>
       </tr>
 
     </table>

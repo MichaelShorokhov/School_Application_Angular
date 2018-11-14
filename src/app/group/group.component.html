@@ -13,13 +13,14 @@
       </tr>
       <tr *ngFor="let group of groups">
         <td>{{group.id}}</td>
-        <td><input [(ngModel)]="group.name" (change)="updateGroup(group)" type="text" class="text"></td>
+        <td><input [(ngModel)]="group.name" type="text" class="text"></td>
         <td>
-          <select [compareWith] = "compareById" [(ngModel)]="group.course" (change)=updateGroup(group) >
+          <select [compareWith] = "compareById" [(ngModel)]="group.course">
               <option *ngFor="let course of courses" [ngValue]="course">{{course.year}}</option>
           </select>
         </td>
         <th><button (click) = "deleteGroup(group)" i18n="@@deleteGroupBtn" [translate]="'group.deleteBtn'">Delete Group</button></th>
+        <th><button (click) = "updateGroup(group)" i18n="@@updateGroupBtn" [translate]="'group.updateBtn'">Update Group</button></th>
       </tr>
 
     </table>

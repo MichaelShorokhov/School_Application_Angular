@@ -11,8 +11,9 @@
       </tr>
       <tr *ngFor="let course of courses">
         <td>{{course.id}}</td>
-        <td><input [(ngModel)]="course.year" (change)="updateCourse(course)" type="text" class="text"></td>
+        <td><input [(ngModel)]="course.year" type="text" class="text"></td>
         <td><button (click) = "deleteCourse(course)" i18n="@@deleteCourseBtn" [translate]="'course.deleteBtn'">Delete Course</button></td>
+        <td><button (click) = "updateCourse(course)" i18n="@@updateCourseBtn" [translate]="'course.updateBtn'">Update Course</button></td>
       </tr>
 
     </table>

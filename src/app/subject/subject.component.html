@@ -12,8 +12,9 @@
       </tr>
       <tr *ngFor="let subject of subjects">
         <td>{{subject.id}}</td>
-        <td><input [(ngModel)]="subject.name" (change)="updateSubject(subject)" type="text" class="text"></td>
+        <td><input [(ngModel)]="subject.name" type="text" class="text"></td>
         <td><button (click) = "deleteSubject(subject)" i18n="@@deleteSubjectBtn" [translate]="'subject.deleteBtn'">Delete Subject</button></td>
+        <td><button (click) = "updateSubject(subject)" i18n="@@updateSubjectBtn" [translate]="'subject.updateBtn'">Update Subject</button></td>
       </tr>
     </table>
     </td>

@@ -11,8 +11,9 @@
       </tr>
       <tr *ngFor="let mark of marks">
         <td>{{mark.id}}</td>
-        <td><input [(ngModel)]="mark.value" (change)="updateMark(mark)" type="text" class="text"></td>
+        <td><input [(ngModel)]="mark.value" type="text" class="text"></td>
         <td><button (click) = "deleteMark(mark)" i18n="@@deleteMarkBtn" [translate]="'mark.deleteBtn'">Delete Mark</button></td>
+        <td><button (click) = "updateMark(mark)" i18n="@@updateMarkBtn" [translate]="'mark.updateBtn'">Update Mark</button></td>
       </tr>
     </table>
           </td>

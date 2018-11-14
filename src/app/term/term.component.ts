@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Term} from "../model/term";
 import {TermService} from "../shared/term.service";
-import {min} from "rxjs/internal/operators";
 
 @Component({
   selector: 'app-term',

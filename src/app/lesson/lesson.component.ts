@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {log} from "util";
 import {Lesson} from "../model/lesson";
 import {LessonService} from "../shared/lesson.service";
 import {SubjectService} from "../shared/subject.service";
@@ -96,25 +95,29 @@ export class LessonComponent implements OnInit {
 
 
   addLesson() {
-    this.service.addLesson(this.newLesson).subscribe(
-      res =>{
-        this.newLesson.id = res.id;
-        this.lessons.push(this.newLesson);
-        this.newLesson = new Lesson();
-      },
-      err => {
-        alert("Error while adding")
-      });
+    if (this.isDataValid(this.newLesson)) {
+      this.service.addLesson(this.newLesson).subscribe(
+        res => {
+          this.newLesson.id = res.id;
+          this.lessons.push(this.newLesson);
+          this.newLesson = new Lesson();
+        },
+        err => {
+          alert("Error while adding")
+        });
+    } else alert("Invalid Data")
   }
 
   updateLesson(updatedLesson : Lesson) {
-    this.service.updateLesson(updatedLesson).subscribe(
-      res=>{
-      },
-      err=>{
-        alert("Error while updating")
-      }
-    )
+    if (this.isDataValid(updatedLesson)) {
+      this.service.updateLesson(updatedLesson).subscribe(
+        res => {
+        },
+        err => {
+          alert("Error while updating")
+        }
+      )
+    }  else alert("Invalid Data")
   }
 
   deleteLesson(lesson: Lesson) {
@@ -133,6 +136,11 @@ export class LessonComponent implements OnInit {
     return obj1.id===obj2.id;
   }
 
-
-
+  isDataValid(lesson: Lesson) : boolean{
+    let groupsValid: boolean = false;
+    let subjectsValid: boolean = false;
+    lesson.teacher.groups.forEach(group =>{if(group.id==lesson.group.id ) groupsValid=true;})
+    lesson.teacher.subjects.forEach(subject=>{if(subject.id==lesson.subject.id) subjectsValid=true;})
+    return (groupsValid && subjectsValid);
+  }
 }

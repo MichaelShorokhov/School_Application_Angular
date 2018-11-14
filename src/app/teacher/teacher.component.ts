@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Teacher} from "../model/teacher";
 import {TeacherService} from "../shared/teacher.service";
-import {Student} from "../model/student";
-import {Group} from "../model/group";
+
 
 @Component({
   selector: 'app-teacher',
@@ -46,7 +45,6 @@ export class TeacherComponent implements OnInit {
   }
 
   updateTeacher(updatedTeacher : Teacher) {
-    console.log(updatedTeacher);
     this.teacherService.updateTeacher(updatedTeacher).subscribe(
       res=>{
 

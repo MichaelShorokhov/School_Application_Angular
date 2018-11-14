@@ -35,7 +35,6 @@ export class MarkForLessonComponent implements OnInit {
     this.service.getAllMarksForLessons().subscribe(
       res => {
         this.markForLessons = res;
-        console.log(res)
       },
       err =>{
         alert("Error")
@@ -46,7 +45,6 @@ export class MarkForLessonComponent implements OnInit {
     this.markService.getAllMarks().subscribe(
       res => {
         this.marks = res;
-        console.log(res)
       },
       err =>{
         alert("Error mark")
@@ -57,7 +55,6 @@ export class MarkForLessonComponent implements OnInit {
     this.lessonService.getAllLessons().subscribe(
       res => {
         this.lessons = res;
-        console.log(res)
       },
       err =>{
         alert("Error lesson")
@@ -68,7 +65,6 @@ export class MarkForLessonComponent implements OnInit {
     this.studentService.getAllStudents().subscribe(
       res => {
         this.students = res;
-        console.log(res)
       },
       err =>{
         alert("Error students")
@@ -86,29 +82,29 @@ export class MarkForLessonComponent implements OnInit {
 
 
   addMarkForLesson() {
+    if (this.isDataValid(this.newMarkForLesson)){
     this.service.addMarkForLesson(this.newMarkForLesson).subscribe(
       res =>{
-        if (!res==null){
           this.newMarkForLesson.id = res.id;
           this.markForLessons.push(this.newMarkForLesson);
           this.newMarkForLesson = new MarkForLesson();
-        } else {
-          alert("Error while adding")
-        }
       },
       err => {
         alert("Error while adding")
       });
+    } else alert("Invalid Data")
   }
 
   updateMarkForLesson(updatedMarkForLesson : MarkForLesson) {
+    if(this.isDataValid(updatedMarkForLesson)){
     this.service.updateMarkForLesson(updatedMarkForLesson).subscribe(
       res=>{
       },
       err=>{
         alert("Error while updating")
       }
-    )
+      )
+    } else alert("Invalid Data")
   }
 
   deleteMarkForLesson(markForLesson: MarkForLesson) {
@@ -125,6 +121,11 @@ export class MarkForLessonComponent implements OnInit {
 
   compareById(obj1: any, obj2: any): boolean{
     return obj1 && obj2 ? obj1.id===obj2.id || obj1===obj2.id: obj1===obj2;
+  }
+
+  isDataValid(markForLesson: MarkForLesson): boolean{
+    if(markForLesson.student.group.id==markForLesson.lesson.group.id){return true}
+    return false;
   }
 
 

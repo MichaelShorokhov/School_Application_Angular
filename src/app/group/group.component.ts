@@ -4,7 +4,6 @@ import {Group} from "../model/group";
 import {CourseService} from "../shared/course.service";
 import {Course} from "../model/course";
 import {log} from "util";
-import {group} from "@angular/animations";
 
 @Component({
   selector: 'app-group',

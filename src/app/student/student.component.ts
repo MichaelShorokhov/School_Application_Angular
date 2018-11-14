@@ -65,7 +65,6 @@ export class StudentComponent implements OnInit {
   }
 
   updateStudent(updatedStudent : Student) {
-    console.log(updatedStudent);
     this.studentService.updateStudent(updatedStudent).subscribe(
       res=>{
       },

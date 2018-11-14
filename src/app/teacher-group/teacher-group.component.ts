@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit } from '@angular/core';
 import {Group} from "../model/group";
 import {TeacherService} from "../shared/teacher.service";
 import {Teacher} from "../model/teacher";

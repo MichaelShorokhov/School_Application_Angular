@@ -1,10 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit } from '@angular/core';
 import {StudentService} from "../shared/student.service";
 import {SubjectService} from "../shared/subject.service";
 import {StudentSubjectService} from "../shared/student-subject.service";
 import {Student} from "../model/student";
 import {Subject} from "../model/subject";
-import {Teacher} from "../model/teacher";
 
 @Component({
   selector: 'app-student-subject',

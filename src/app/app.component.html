@@ -1,15 +1,20 @@
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-sm-2">
+    <div class="col-md-auto">
             <app-navigation></app-navigation>
     </div>
-    <div class="col-sm-1">
-        <button (click)="useLanguage('en')">en</button>
-        <button (click)="useLanguage('ru')">ru</button>
-    </div>
-    <div class="col-sm-5">
+    <div class="col">
       <router-outlet></router-outlet>
     </div>
-
+    <div class="col-md-auto">
+      <div class="btn-group btn-group-toggle" data-toggle="button">
+        <label class="btn btn-outline-primary" >
+            <input type="radio" (click)="useLanguage('en')">en
+        </label>
+        <label class="btn btn-outline-primary">
+            <input type="radio" (click)="useLanguage('ru')">ru
+        </label>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Subject} from "../model/subject";
 import {SubjectService} from "../shared/subject.service";
-import {Teacher} from "../model/teacher";
-import {Student} from "../model/student";
 
 
 @Component({

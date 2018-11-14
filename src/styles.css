@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+ul.list li{
+  display: inline-block;
+  margin-right: 4px;
+  padding: 2px;
+}
+tr{
+  vertical-align: top;
+}
+td.table{
+  text-align: center;
+}
+
+input.numb{
+  width: 75px;
+  text-align: center;
+}
+input.text{
+  width: 150px;
+  text-align: center;
+}
+select.selct{
+  width: 150px;
+}
+
+div.inputPanel{
+  text-align: center;
+  background-color: lightblue;
+  border: 1px solid black;
+  width: 200px;
+
+}

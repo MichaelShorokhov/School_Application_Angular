@@ -51,7 +51,52 @@
                   "maximumError": "5mb"
                 }
               ]
+            },
+            "en":{
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "outputPath": "dist/en/",
+              "baseHref": "/en/",
+              "i18nFile": "src/locale/messages.en.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "en"
+            },
+            "ru":{
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "outputPath": "dist/ru/",
+              "baseHref": "/ru/",
+              "i18nFile": "src/locale/messages.ru.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "ru"
             }
+
           }
         },
         "serve": {
@@ -62,6 +107,12 @@
           "configurations": {
             "production": {
               "browserTarget": "school-application-angular:build:production"
+            },
+            "ru":{
+              "browserTarget": "school-application-angular:build:ru"
+            },
+            "en":{
+              "browserTarget": "school-application-angular:build:en"
             }
           }
         },

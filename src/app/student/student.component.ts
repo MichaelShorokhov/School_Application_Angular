@@ -3,6 +3,7 @@ import {Student} from "../model/student";
 import {StudentService} from "../shared/student.service";
 import {Group} from "../model/group";
 import {GroupService} from "../shared/group.service";
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-student',
@@ -15,7 +16,7 @@ export class StudentComponent implements OnInit {
   groups: Group[] = [];
   newStudent: Student;
 
-  constructor(private studentService : StudentService, private groupService: GroupService) {
+  constructor(private studentService : StudentService, private groupService: GroupService, private translate: TranslateService) {
     this.getAllSources();
   }
 
@@ -30,7 +31,7 @@ export class StudentComponent implements OnInit {
         this.students = res;
       },
       err =>{
-        alert("Error")
+        alert(this.translate.instant("error.gettingStudentList"))
       }
     )
   }
@@ -41,7 +42,7 @@ export class StudentComponent implements OnInit {
         this.groups = res;
       },
       err =>{
-        alert("Error gr")
+        alert(this.translate.instant("error.gettingGroupList"))
       }
     )
   }
@@ -60,7 +61,7 @@ export class StudentComponent implements OnInit {
         this.newStudent = new Student();
       },
       err => {
-        alert("Error while adding")
+        alert(this.translate.instant("error.add"))
       });
   }
 
@@ -69,7 +70,7 @@ export class StudentComponent implements OnInit {
       res=>{
       },
       err=>{
-        alert("Error while updating")
+        alert(this.translate.instant("error.update"))
       }
     )
   }
@@ -81,7 +82,7 @@ export class StudentComponent implements OnInit {
         this.students.splice(indexOfStudent,1)
       },
       err =>{
-        alert("Error while deleting")
+        alert(this.translate.instant("error.delete"))
       }
     )
   }

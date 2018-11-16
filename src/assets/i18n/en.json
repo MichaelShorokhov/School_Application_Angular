@@ -139,5 +139,24 @@
     "addBtn": "Add",
     "deleteBtn": "Delete",
     "updateBtn": "Update"
+  },
+  "error":{
+    "gettingMarkList": "Error while getting list of marks",
+    "gettingStudentList": "Error while getting list of students",
+    "gettingTeacherList": "Error while getting list of teachers",
+    "gettingSubjectList": "Error while getting list of subjects",
+    "gettingTermList": "Error while getting list of terms",
+    "gettingCourseList": "Error while getting list of courses",
+    "gettingMarkForLessonList": "Error while getting list of marks for lesson",
+    "gettingGroupList": "Error while getting list of groups",
+    "gettingLessonList": "Error while getting list of lessons",
+    "add": "Error while adding",
+    "update": "Error while updating",
+    "delete": "Error while deleting",
+    "invalidData": "Invalid data",
+    "closingTerm": "Error while closing term",
+    "getSubjectsByTeacherList":"Error while getting subjects for teacher",
+    "getGroupsByTeacherList": "Error while getting groups for teacher",
+    "getSubjectsByStudentList": "Error while getting subjects for student"
   }
 }

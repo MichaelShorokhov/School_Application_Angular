@@ -4,6 +4,7 @@ import {TeacherService} from "../shared/teacher.service";
 import {Teacher} from "../model/teacher";
 import {GroupService} from "../shared/group.service";
 import {TeacherGroupService} from "../shared/teacher-group.service";
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-teacher-group',
@@ -18,7 +19,7 @@ export class TeacherGroupComponent implements OnInit {
   groupsByTeacher: Group[] = [];
 
   constructor(private teacherService: TeacherService, private groupServece: GroupService,
-              private teacherGroupService: TeacherGroupService) {
+              private teacherGroupService: TeacherGroupService, private translate: TranslateService) {
     this.getAllSources();
   }
 
@@ -31,7 +32,7 @@ export class TeacherGroupComponent implements OnInit {
         this.teachers = res;
       },
       err =>{
-        alert("Error while getting teachers");
+        alert(this.translate.instant("error.gettingTeacherList"));
       }
     )
   }
@@ -42,7 +43,7 @@ export class TeacherGroupComponent implements OnInit {
         this.groups = res;
       },
       err =>{
-        alert("Error while getting groups")
+        alert(this.translate.instant("error.gettingGroupList"))
       }
     )
   }
@@ -58,7 +59,7 @@ export class TeacherGroupComponent implements OnInit {
         this.groupsByTeacher = res;
       },
       err=>{
-        alert("Error while getting groups for teacher")
+        alert(this.translate.instant("error.getGroupsByTeacherList"))
       }
     )
   }
@@ -70,7 +71,7 @@ export class TeacherGroupComponent implements OnInit {
         this.groupsByTeacher.splice(indexOfGroup, 1);
       },
       err=>{
-        alert("Error while removing group")
+        alert(this.translate.instant("error.delete"))
       }
     )
   }
@@ -82,7 +83,7 @@ export class TeacherGroupComponent implements OnInit {
         this.groupsByTeacher.push(this.selectedGroup)
       },
       err=>{
-        alert("Error while adding group")
+        alert(this.translate.instant("error.add"))
       }
     )
   }

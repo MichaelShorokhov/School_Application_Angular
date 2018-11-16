@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CourseService} from "../shared/course.service";
 import {Course} from "../model/course";
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-course',
@@ -11,7 +12,7 @@ export class CourseComponent implements OnInit {
   courses: Course[] = [];
   newCourse: Course;
 
-  constructor(private service : CourseService) { }
+  constructor(private service : CourseService, private translate: TranslateService) { }
 
   ngOnInit() {
     this.getAllCourses();
@@ -24,7 +25,7 @@ export class CourseComponent implements OnInit {
         this.courses = res;
       },
       err =>{
-        alert("Error")
+        alert(this.translate.instant("error.gettingCourseList"))
       }
     )
   }
@@ -38,7 +39,7 @@ export class CourseComponent implements OnInit {
         this.newCourse = new Course();
       },
       err => {
-        alert("Error while adding")
+        alert(this.translate.instant("error.add"))
       });
   }
 
@@ -48,7 +49,7 @@ export class CourseComponent implements OnInit {
 
       },
       err=>{
-        alert("Error while updating")
+        alert(this.translate.instant("error.update"))
       }
     )
   }
@@ -60,7 +61,7 @@ export class CourseComponent implements OnInit {
         this.courses.splice(indexOfCourse,1)
       },
       err =>{
-        alert("Error while deleting")
+        alert(this.translate.instant("error.delete"))
       }
     )
   }

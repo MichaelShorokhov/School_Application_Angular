@@ -21,6 +21,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { TeacherGroupComponent } from './teacher-group/teacher-group.component';
 import { TeacherSubjectComponent } from './teacher-subject/teacher-subject.component';
 import { StudentSubjectComponent } from './student-subject/student-subject.component';
+import { LoginComponent } from './login/login.component';
 
 const appRoutes: Routes = [
   {
@@ -70,6 +71,10 @@ const appRoutes: Routes = [
   {
     path: 'student_subject',
     component: StudentSubjectComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   }
 ];
 
@@ -88,7 +93,8 @@ const appRoutes: Routes = [
     NavigationComponent,
     TeacherGroupComponent,
     TeacherSubjectComponent,
-    StudentSubjectComponent
+    StudentSubjectComponent,
+    LoginComponent
   ],
   imports: [
     HttpClientModule,

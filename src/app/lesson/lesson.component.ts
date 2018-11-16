@@ -9,6 +9,7 @@ import {Subject} from "../model/subject";
 import {Term} from "../model/term";
 import {Group} from "../model/group";
 import {Teacher} from "../model/teacher";
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-lesson',
@@ -26,7 +27,7 @@ export class LessonComponent implements OnInit {
   isDataAvailable: boolean = false;
 
   constructor(private service : LessonService, private subjectService: SubjectService, private termService : TermService,
-              private teacherService : TeacherService, private groupService : GroupService) {
+              private teacherService : TeacherService, private groupService : GroupService,private translate: TranslateService) {
     this.getAllSources();
   }
 
@@ -40,7 +41,7 @@ export class LessonComponent implements OnInit {
         this.lessons = res;
       },
       err =>{
-        alert("Error")
+        alert(this.translate.instant("error.gettingLessonList"))
       }
     )
   }
@@ -50,7 +51,7 @@ export class LessonComponent implements OnInit {
         this.subjects = data;
       },
       err =>{
-        alert("Error Subj")
+        alert(this.translate.instant("error.gettingSubjectList"))
       }
     )
   }
@@ -60,7 +61,7 @@ export class LessonComponent implements OnInit {
         this.terms = res;
       },
       err =>{
-        alert("Error term")
+        alert(this.translate.instant("error.gettingTermList"))
       }
     )
   }
@@ -70,7 +71,7 @@ export class LessonComponent implements OnInit {
         this.teachers = res;
       },
       err =>{
-        alert("Error teach")
+        alert(this.translate.instant("error.gettingTeacherList"))
       }
     )
   }
@@ -80,7 +81,7 @@ export class LessonComponent implements OnInit {
         this.groups = res;
       },
       err =>{
-        alert("Error gr")
+        alert(this.translate.instant("error.gettingGroupList"))
       }
     )
   }
@@ -103,9 +104,9 @@ export class LessonComponent implements OnInit {
           this.newLesson = new Lesson();
         },
         err => {
-          alert("Error while adding")
+          alert(this.translate.instant("error.add"))
         });
-    } else alert("Invalid Data")
+    } else alert(this.translate.instant("error.invalidData"))
   }
 
   updateLesson(updatedLesson : Lesson) {
@@ -114,10 +115,10 @@ export class LessonComponent implements OnInit {
         res => {
         },
         err => {
-          alert("Error while updating")
+          alert(this.translate.instant("error.update"))
         }
       )
-    }  else alert("Invalid Data")
+    }  else alert(this.translate.instant("error.invalidData"))
   }
 
   deleteLesson(lesson: Lesson) {
@@ -127,7 +128,7 @@ export class LessonComponent implements OnInit {
         this.lessons.splice(indexOfLesson,1)
       },
       err =>{
-        alert("Error while deleting")
+        alert(this.translate.instant("error.delete"))
       }
     )
   }
@@ -139,8 +140,8 @@ export class LessonComponent implements OnInit {
   isDataValid(lesson: Lesson) : boolean{
     let groupsValid: boolean = false;
     let subjectsValid: boolean = false;
-    lesson.teacher.groups.forEach(group =>{if(group.id==lesson.group.id ) groupsValid=true;})
-    lesson.teacher.subjects.forEach(subject=>{if(subject.id==lesson.subject.id) subjectsValid=true;})
+    lesson.teacher.groups.forEach(group =>{if(group.id==lesson.group.id ) groupsValid=true;});
+    lesson.teacher.subjects.forEach(subject=>{if(subject.id==lesson.subject.id) subjectsValid=true;});
     return (groupsValid && subjectsValid);
   }
 }

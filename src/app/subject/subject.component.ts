@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Subject} from "../model/subject";
 import {SubjectService} from "../shared/subject.service";
+import {TranslateService} from '@ngx-translate/core';
 
 
 @Component({
@@ -13,7 +14,7 @@ export class SubjectComponent implements OnInit {
   subjects: Subject[] = [];
   newSubject: Subject;
 
-  constructor(private service : SubjectService) { }
+  constructor(private service : SubjectService, private translate: TranslateService) { }
 
   ngOnInit() {
     this.getAllSubjects();
@@ -26,7 +27,7 @@ export class SubjectComponent implements OnInit {
         this.subjects = res;
       },
       err =>{
-        alert("Error")
+        alert(this.translate.instant("error.gettingSubjectList"))
       }
     )
   }
@@ -40,7 +41,7 @@ export class SubjectComponent implements OnInit {
         this.newSubject = new Subject();
       },
       err => {
-        alert("Error while adding")
+        alert(this.translate.instant("error.add"))
       });
   }
 
@@ -50,7 +51,7 @@ export class SubjectComponent implements OnInit {
 
       },
       err=>{
-        alert("Error while updating")
+        alert(this.translate.instant("error.update"))
       }
     )
   }
@@ -62,7 +63,7 @@ export class SubjectComponent implements OnInit {
         this.subjects.splice(indexOfSubject,1)
       },
       err =>{
-        alert("Error while deleting")
+        alert(this.translate.instant("error.delete"))
       }
     )
   }

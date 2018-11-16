@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Teacher} from "../model/teacher";
 import {TeacherService} from "../shared/teacher.service";
+import {TranslateService} from '@ngx-translate/core';
 
 
 @Component({
@@ -12,7 +13,7 @@ export class TeacherComponent implements OnInit {
   teachers: Teacher[] = [];
   newTeacher: Teacher;
 
-  constructor(private teacherService : TeacherService) {}
+  constructor(private teacherService : TeacherService, private translate: TranslateService) {}
 
   ngOnInit() {
     this.getAllTeachers();
@@ -26,7 +27,7 @@ export class TeacherComponent implements OnInit {
         this.teachers = res;
       },
       err =>{
-        alert("Error")
+        alert(this.translate.instant("error.gettingTeacherList"))
       }
     )
   }
@@ -40,7 +41,7 @@ export class TeacherComponent implements OnInit {
         this.newTeacher = new Teacher();
       },
       err => {
-        alert("Error while adding")
+        alert(this.translate.instant("error.add"))
       });
   }
 
@@ -50,7 +51,7 @@ export class TeacherComponent implements OnInit {
 
       },
       err=>{
-        alert("Error while updating")
+        alert(this.translate.instant("error.update"))
       }
     )
   }
@@ -62,7 +63,7 @@ export class TeacherComponent implements OnInit {
         this.teachers.splice(indexOfTeacher,1)
       },
       err =>{
-        alert("Error while deleting")
+        alert(this.translate.instant("error.delete"))
       }
     )
   }

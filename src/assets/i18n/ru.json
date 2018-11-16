@@ -139,5 +139,24 @@
     "addBtn": "Добавить",
     "deleteBtn": "Удалить",
     "updateBtn": "Сохранить"
+  },
+  "error":{
+    "gettingMarkList": "Ошибка при получении списка оценок",
+    "gettingStudentList": "Ошибка при получении списка студентов",
+    "gettingTeacherList": "Ошибка при получении списка учителей",
+    "gettingSubjectList": "Ошибка при получении списка предметов",
+    "gettingTermList": "Ошибка при получении списка семестров",
+    "gettingCourseList": "Ошибка при получении списка курсов",
+    "gettingMarkForLessonList": "Ошибка при получении списка оценок за урок",
+    "gettingGroupList": "Ошибка при получении списка групп",
+    "gettingLessonList": "Ошибка при получении списка уроков",
+    "add": "Ошибка при добавлении",
+    "update": "Ошибка при обновлении",
+    "delete": "Ошибка при удалении",
+    "invalidData": "Неверные данные",
+    "closingTerm": "Ошибка при закрытии семестра",
+    "getSubjectsByTeacherList":"Ошибка при получении предметов для учителя",
+    "getGroupsByTeacherList": "Ошибка при получении групп для учителя",
+    "getSubjectsByStudentList": "Ошибка при получении предметов для студента"
   }
 }

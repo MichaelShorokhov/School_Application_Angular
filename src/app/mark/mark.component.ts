@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MarkService} from "../shared/mark.service";
 import {Mark} from "../model/mark";
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-mark',
@@ -11,7 +12,7 @@ export class MarkComponent implements OnInit {
   marks: Mark[] = [];
   newMark: Mark;
 
-  constructor(private markService : MarkService) {}
+  constructor(private markService : MarkService, private translate: TranslateService) {}
 
   ngOnInit() {
     this.getAllMarks();
@@ -24,7 +25,7 @@ export class MarkComponent implements OnInit {
         this.marks = res;
       },
       err =>{
-        alert("Error")
+        alert(this.translate.instant("error.gettingMarkList"))
       }
     )
   }
@@ -38,7 +39,7 @@ export class MarkComponent implements OnInit {
         this.newMark = new Mark();
       },
       err => {
-        alert("Error while adding")
+        alert(this.translate.instant("error.add"))
       });
   }
 
@@ -48,7 +49,7 @@ export class MarkComponent implements OnInit {
 
     },
       err=>{
-          alert("Error while updating")
+          alert(this.translate.instant("error.update"))
       }
     )
   }
@@ -60,7 +61,7 @@ export class MarkComponent implements OnInit {
           this.marks.splice(indexOfMark,1)
         },
         err =>{
-          alert("Error while deleting")
+          alert(this.translate.instant("error.delete"))
         }
       )
   }

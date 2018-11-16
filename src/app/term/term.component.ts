@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Term} from "../model/term";
 import {TermService} from "../shared/term.service";
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-term',
@@ -11,7 +12,7 @@ export class TermComponent implements OnInit {
 terms : Term[] = [];
 newTerm: Term;
 
-  constructor(private service : TermService) { }
+  constructor(private service : TermService, private translate: TranslateService) { }
 
   ngOnInit() {
     this.getAllTerms();
@@ -24,7 +25,7 @@ newTerm: Term;
         this.terms = res;
       },
       err =>{
-        alert("Error")
+        alert(this.translate.instant("error.gettingTermList"))
       }
     )
   }
@@ -38,7 +39,7 @@ newTerm: Term;
         this.newTerm = new Term();
       },
       err => {
-        alert("Error while adding")
+        alert(this.translate.instant("error.add"))
       });
   }
 
@@ -48,7 +49,7 @@ newTerm: Term;
 
       },
       err=>{
-        alert("Error while updating")
+        alert(this.translate.instant("error.update"))
       }
     )
   }
@@ -60,7 +61,7 @@ newTerm: Term;
         this.terms.splice(indexOfTerm,1)
       },
       err =>{
-        alert("Error while deleting")
+        alert(this.translate.instant("error.delete"))
       }
     )
   }
@@ -71,7 +72,7 @@ newTerm: Term;
 
       },
       err=>{
-        alert("Error while closing term")
+        alert(this.translate.instant("error.closingTerm"))
       }
     )
   }

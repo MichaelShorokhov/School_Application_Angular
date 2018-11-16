@@ -7,6 +7,7 @@ import {Mark} from "../model/mark";
 import {MarkService} from "../shared/mark.service";
 import {LessonService} from "../shared/lesson.service";
 import {StudentService} from "../shared/student.service";
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-mark-for-lesson',
@@ -22,7 +23,8 @@ export class MarkForLessonComponent implements OnInit {
   newMarkForLesson: MarkForLesson;
 
   constructor(private service : MarkForLessonService, private markService: MarkService,
-              private lessonService : LessonService, private studentService : StudentService) {
+              private lessonService : LessonService, private studentService : StudentService,
+              private translate: TranslateService) {
 
   }
 
@@ -37,7 +39,7 @@ export class MarkForLessonComponent implements OnInit {
         this.markForLessons = res;
       },
       err =>{
-        alert("Error")
+        alert(this.translate.instant("error.gettingMarkForLessonList"))
       }
     )
   }
@@ -47,7 +49,7 @@ export class MarkForLessonComponent implements OnInit {
         this.marks = res;
       },
       err =>{
-        alert("Error mark")
+        alert(this.translate.instant("error.gettingMarkList"))
       }
     )
   }
@@ -57,7 +59,7 @@ export class MarkForLessonComponent implements OnInit {
         this.lessons = res;
       },
       err =>{
-        alert("Error lesson")
+        alert(this.translate.instant("error.gettingLessonList"))
       }
     )
   }
@@ -67,7 +69,7 @@ export class MarkForLessonComponent implements OnInit {
         this.students = res;
       },
       err =>{
-        alert("Error students")
+        alert(this.translate.instant("error.gettingStudentList"))
       }
     )
   }
@@ -90,9 +92,9 @@ export class MarkForLessonComponent implements OnInit {
           this.newMarkForLesson = new MarkForLesson();
       },
       err => {
-        alert("Error while adding")
+        alert(this.translate.instant("error.add"))
       });
-    } else alert("Invalid Data")
+    } else alert(this.translate.instant("error.invalidData"))
   }
 
   updateMarkForLesson(updatedMarkForLesson : MarkForLesson) {
@@ -101,10 +103,10 @@ export class MarkForLessonComponent implements OnInit {
       res=>{
       },
       err=>{
-        alert("Error while updating")
+        alert(this.translate.instant("error.update"))
       }
       )
-    } else alert("Invalid Data")
+    } else alert(this.translate.instant("error.invalidData"))
   }
 
   deleteMarkForLesson(markForLesson: MarkForLesson) {
@@ -114,7 +116,7 @@ export class MarkForLessonComponent implements OnInit {
         this.markForLessons.splice(indexOfMarkForLesson,1)
       },
       err =>{
-        alert("Error while deleting")
+        alert(this.translate.instant("error.delete"))
       }
     )
   }

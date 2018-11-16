@@ -4,6 +4,7 @@ import {Group} from "../model/group";
 import {CourseService} from "../shared/course.service";
 import {Course} from "../model/course";
 import {log} from "util";
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-group',
@@ -16,7 +17,7 @@ export class GroupComponent implements OnInit {
   courses: Course[] = [];
   newGroup: Group;
 
-  constructor(private service : GroupService, private courseService: CourseService) {
+  constructor(private service : GroupService, private courseService: CourseService, private translate: TranslateService) {
     this.getAllGroups();
     this.getAllCourses();
   }
@@ -31,7 +32,7 @@ export class GroupComponent implements OnInit {
         this.courses = res;
       },
       err=>{
-        alert("Error while getting courses")
+        alert(this.translate.instant("error.gettingCourseList"))
       }
     )
   }
@@ -42,7 +43,7 @@ export class GroupComponent implements OnInit {
         this.groups = res;
       },
       err =>{
-        alert("Error")
+        alert(this.translate.instant("error.gettingGroupList"))
       }
     )
   }
@@ -56,17 +57,16 @@ export class GroupComponent implements OnInit {
         this.newGroup = new Group();
       },
       err => {
-        alert("Error while adding")
+        alert(this.translate.instant("error.add"))
       });
   }
 
   updateGroup(updatedGroup : Group) {
     this.service.updateGroup(updatedGroup).subscribe(
       res=>{
-        log(res.course.id.toString())
       },
       err=>{
-        alert("Error while updating")
+        alert(this.translate.instant("error.update"))
       }
     )
   }
@@ -78,7 +78,7 @@ export class GroupComponent implements OnInit {
         this.groups.splice(indexOfGroup,1)
       },
       err =>{
-        alert("Error while deleting")
+        alert(this.translate.instant("error.delete"))
       }
     )
   }

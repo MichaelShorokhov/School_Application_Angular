@@ -4,6 +4,7 @@ import {SubjectService} from "../shared/subject.service";
 import {StudentSubjectService} from "../shared/student-subject.service";
 import {Student} from "../model/student";
 import {Subject} from "../model/subject";
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-student-subject',
@@ -18,7 +19,7 @@ export class StudentSubjectComponent implements OnInit {
   subjectsByStudent: Subject[] = [];
 
   constructor(private studentService: StudentService, private subjectServece: SubjectService,
-                      private studentSubjectService: StudentSubjectService) {
+                      private studentSubjectService: StudentSubjectService, private translate: TranslateService) {
         this.getAllSources();
   }
 
@@ -31,7 +32,7 @@ export class StudentSubjectComponent implements OnInit {
         this.students = res;
       },
       err =>{
-        alert("Error while getting students");
+        alert(this.translate.instant("error.gettingStudentList"));
       }
     )
   }
@@ -42,7 +43,7 @@ export class StudentSubjectComponent implements OnInit {
         this.subjects = res;
       },
     err =>{
-      alert("Error while getting subjects")
+      alert(this.translate.instant("error.gettingSubjectList"))
     }
   )
   }
@@ -58,7 +59,7 @@ export class StudentSubjectComponent implements OnInit {
         this.subjectsByStudent = res;
       },
       err=>{
-        alert("Error while getting subjects for student")
+        alert(this.translate.instant("error.getSubjectsByStudentList"))
       }
     )
   }
@@ -70,7 +71,7 @@ export class StudentSubjectComponent implements OnInit {
         this.subjectsByStudent.splice(indexOfSubject, 1);
       },
       err=>{
-        alert("Error while removing subject")
+        alert(this.translate.instant("error.delete"))
       }
     )
   }
@@ -82,7 +83,7 @@ export class StudentSubjectComponent implements OnInit {
         this.subjectsByStudent.push(this.selectedSubject)
       },
       err=>{
-        alert("Error while adding subject")
+        alert(this.translate.instant("error.add"))
       }
     )
   }

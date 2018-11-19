@@ -140,8 +140,10 @@ export class LessonComponent implements OnInit {
   isDataValid(lesson: Lesson) : boolean{
     let groupsValid: boolean = false;
     let subjectsValid: boolean = false;
+    let dateValid: boolean = false;
     lesson.teacher.groups.forEach(group =>{if(group.id==lesson.group.id ) groupsValid=true;});
     lesson.teacher.subjects.forEach(subject=>{if(subject.id==lesson.subject.id) subjectsValid=true;});
-    return (groupsValid && subjectsValid);
+    if (lesson.date<=lesson.term.endDate && lesson.date>=lesson.term.startDate) dateValid=true;
+    return (groupsValid && subjectsValid&&dateValid);
   }
 }

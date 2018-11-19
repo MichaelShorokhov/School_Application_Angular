@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Lesson} from "../model/lesson";
 import {Observable} from "rxjs/index";
+import {LoginService} from './login.service';
 
 @Injectable({
   providedIn: 'root'
@@ -14,22 +15,22 @@ export class LessonService {
   public UPDATE_LESSON = `${this.BASE_URL}/update`;
   public DELETE_LESSON = `${this.BASE_URL}/remove/`;
 
-  constructor( private http: HttpClient) { }
+  constructor( private http: HttpClient, private loginService: LoginService) { }
 
   getAllLessons(): Observable<Lesson[]>{
-    return this.http.get<Lesson[]>(this.ALL_LESSONS);
+    return this.http.get<Lesson[]>(this.ALL_LESSONS, {headers: this.loginService.headers});
   }
 
   addLesson(lesson: Lesson) : Observable<Lesson>{
-    return this.http.post<Lesson>(this.ADD_LESSON, lesson);
+    return this.http.post<Lesson>(this.ADD_LESSON, lesson, {headers: this.loginService.headers});
   }
 
   updateLesson(lesson: Lesson) : Observable<Lesson>{
-    return this.http.post<Lesson>(this.UPDATE_LESSON, lesson);
+    return this.http.post<Lesson>(this.UPDATE_LESSON, lesson, {headers: this.loginService.headers});
   }
 
   deleteLesson(lesson: Lesson) : Observable<any>{
-    return this.http.delete(this.DELETE_LESSON + lesson.id.toString());
+    return this.http.delete(this.DELETE_LESSON + lesson.id.toString(), {headers: this.loginService.headers});
   }
 }
 

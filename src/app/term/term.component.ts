@@ -32,26 +32,30 @@ newTerm: Term;
 
 
   addTerm() {
-    this.service.addTerm(this.newTerm).subscribe(
-      res =>{
-        this.newTerm.id = res.id;
-        this.terms.push(this.newTerm);
-        this.newTerm = new Term();
-      },
-      err => {
-        alert(this.translate.instant("error.add"))
-      });
+    if (this.isDataValid(this.newTerm)) {
+      this.service.addTerm(this.newTerm).subscribe(
+        res => {
+          this.newTerm.id = res.id;
+          this.terms.push(this.newTerm);
+          this.newTerm = new Term();
+        },
+        err => {
+          alert(this.translate.instant("error.add"))
+        });
+    }else alert(this.translate.instant("error.invalidData"))
   }
 
   updateTerm(updatedTerm : Term) {
-    this.service.updateTerm(updatedTerm).subscribe(
-      res=>{
+    if (this.isDataValid(updatedTerm)) {
+      this.service.updateTerm(updatedTerm).subscribe(
+        res => {
 
-      },
-      err=>{
-        alert(this.translate.instant("error.update"))
-      }
-    )
+        },
+        err => {
+          alert(this.translate.instant("error.update"))
+        }
+      )
+    } else alert(this.translate.instant("error.invalidData"))
   }
 
   deleteTerm(term: Term) {
@@ -67,6 +71,7 @@ newTerm: Term;
   }
 
   closeTerm(updatedTerm : Term) {
+
     this.service.closeTerm(updatedTerm).subscribe(
       res=>{
 
@@ -75,6 +80,10 @@ newTerm: Term;
         alert(this.translate.instant("error.closingTerm"))
       }
     )
+  }
+
+  isDataValid(term: Term) : boolean{
+    return term.startDate<term.endDate;
   }
 
 

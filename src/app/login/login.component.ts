@@ -24,6 +24,7 @@ export class LoginComponent {
   }
 
   logout(){
+    this.credentials = {username: '', password: ''};
     this.service.logout();
   }
 

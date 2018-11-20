@@ -1,12 +1,12 @@
 <form role="form" (submit)="login()">
 	<div class="form-group">
-		<label for="username">Username:</label> <input type="text"
+		<label for="username" [translate]="'login.username'">Username:</label> <input type="text"
 			class="form-control" id="username" name="username" [(ngModel)]="credentials.username"/>
 	</div>
 	<div class="form-group">
-		<label for="password">Password:</label> <input type="password"
+		<label for="password" [translate]="'login.password'">Password:</label> <input type="password"
 			class="form-control" id="password" name="password" [(ngModel)]="credentials.password"/>
 	</div>
-	<button type="submit" class="btn btn-primary">Submit</button>
+	<button type="submit" class="btn btn-primary" [translate]="'login.submitBtn'">Submit</button>
 </form>
-<button (click)="logout()" class="btn btn-secondary">Logout</button>
+<button (click)="logout()" class="btn btn-secondary" [translate]="'login.logoutBtn'">Logout</button>

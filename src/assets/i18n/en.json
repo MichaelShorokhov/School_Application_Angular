@@ -12,7 +12,8 @@
     "listOfMarks": "List of marks",
     "teachersInGroups": "Groups by teacher",
     "teachersInSubjects": "Subjects by teacher",
-    "studentsInSubjects": "Subjects by student"
+    "studentsInSubjects": "Subjects by student",
+    "login": "Login"
   },
   "course": {
     "id": "ID",
@@ -158,5 +159,11 @@
     "getSubjectsByTeacherList":"Error while getting subjects for teacher",
     "getGroupsByTeacherList": "Error while getting groups for teacher",
     "getSubjectsByStudentList": "Error while getting subjects for student"
+  },
+  "login":{
+    "username": " Username",
+    "password": "Password",
+    "submitBtn": "Submit",
+    "logoutBtn": "Logout"
   }
 }

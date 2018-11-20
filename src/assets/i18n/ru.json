@@ -12,7 +12,8 @@
   "listOfMarks": "Список оценок",
   "teachersInGroups": "Учителя по группам",
   "teachersInSubjects": "Учителя по предметам",
-  "studentsInSubjects": "Студенты по предметам"
+  "studentsInSubjects": "Студенты по предметам",
+  "login": "Авторизироваться"
   },
   "course": {
   "id": "ИД",
@@ -158,5 +159,11 @@
     "getSubjectsByTeacherList":"Ошибка при получении предметов для учителя",
     "getGroupsByTeacherList": "Ошибка при получении групп для учителя",
     "getSubjectsByStudentList": "Ошибка при получении предметов для студента"
+  },
+  "login":{
+    "username": " Имя пользователя",
+    "password": "Пароль",
+    "submitBtn": "Войти",
+    "logoutBtn": "Выйти с пользователя"
   }
 }

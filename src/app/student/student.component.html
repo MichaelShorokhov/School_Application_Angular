@@ -25,8 +25,8 @@
               <option *ngFor="let group of groups" [ngValue]="group">{{group.name}}</option>
           </select>
         </td>
-        <td><button (click) = "deleteStudent(student)" i18n="@@deleteStudentBtn" [translate]="'student.deleteBtn'">Delete Student</button></td>
-        <td><button (click) = "updateStudent(student)" i18n="@@updateStudentBtn" [translate]="'student.updateBtn'">Update Student</button></td>
+        <td><button (click) = "deleteStudent(student)" i18n="@@deleteStudentBtn" [translate]="'buttons.delete'">Delete Student</button></td>
+        <td><button (click) = "updateStudent(student)" i18n="@@updateStudentBtn" [translate]="'buttons.update'">Update Student</button></td>
       </tr>
     </table>
     </td>
@@ -48,7 +48,7 @@
                      <select [(ngModel)]="newStudent.group" required class="selct">
                          <option *ngFor="let group of groups" [ngValue]="group">{{group.name}}</option>
                      </select></p>
-        <p><button (click)="addStudent()" i18n="@@addStudentBtn" [translate]="'student.addBtn'">Add Student</button></p>
+        <p><button (click)="addStudent()" i18n="@@addStudentBtn" [translate]="'buttons.add'">Add Student</button></p>
         </div>
     </td>
     </tr>

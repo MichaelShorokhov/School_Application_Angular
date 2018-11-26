@@ -19,8 +19,8 @@
         <td><input [(ngModel)]="teacher.surname" type="text" class="text"></td>
         <td><input [(ngModel)]="teacher.age" type="number" class="numb"></td>
         <td><input [(ngModel)]="teacher.phoneNumber" type="text" class="text"></td>
-        <td><button (click) = "deleteTeacher(teacher)" i18n="@@deleteTeacherBtn" [translate]="'teacher.deleteBtn'">Delete Teacher</button></td>
-        <td><button (click) = "updateTeacher(teacher)" i18n="@@updateTeacherBtn" [translate]="'teacher.updateBtn'">Update Teacher</button></td>
+        <td><button (click) = "deleteTeacher(teacher)" i18n="@@deleteTeacherBtn" [translate]="'buttons.delete'">Delete Teacher</button></td>
+        <td><button (click) = "updateTeacher(teacher)" i18n="@@updateTeacherBtn" [translate]="'buttons.update'">Update Teacher</button></td>
       </tr>
 
     </table>
@@ -39,7 +39,7 @@
             <p><label i18n="@@teacherPhoneInput" [translate]="'teacher.phoneInput'">Input Teacher Phone Number </label>
             <input type="text" [(ngModel)]="newTeacher.phoneNumber" required class="text">
             </p>
-            <p><button (click)="addTeacher()" i18n="@@addTeacherBtn" [translate]="'teacher.addBtn'">Add Teacher</button></p>
+            <p><button (click)="addTeacher()" i18n="@@addTeacherBtn" [translate]="'buttons.add'">Add Teacher</button></p>
         </div>
         </td>
         </tr>

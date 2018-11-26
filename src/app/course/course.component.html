@@ -12,8 +12,8 @@
       <tr *ngFor="let course of courses">
         <td>{{course.id}}</td>
         <td><input [(ngModel)]="course.year" type="text" class="text"></td>
-        <td><button (click) = "deleteCourse(course)" i18n="@@deleteCourseBtn" [translate]="'course.deleteBtn'">Delete Course</button></td>
-        <td><button (click) = "updateCourse(course)" i18n="@@updateCourseBtn" [translate]="'course.updateBtn'">Update Course</button></td>
+        <td><button (click) = "deleteCourse(course)" i18n="@@deleteCourseBtn" [translate]="'buttons.delete'">Delete Course</button></td>
+        <td><button (click) = "updateCourse(course)" i18n="@@updateCourseBtn" [translate]="'buttons.update'">Update Course</button></td>
       </tr>
 
     </table>
@@ -22,7 +22,7 @@
                 <div class="inputPanel">
                 <p><label i18n="@@yearInput" [translate]="'course.yearInput'">Input Course Year </label>
                 <input type="text" [(ngModel)]="newCourse.year" required class="text"></p>
-                <p><button (click)="addCourse()" i18n="@@addCourseBtn" [translate]="'course.addBtn'">Add Course</button></p>
+                <p><button (click)="addCourse()" i18n="@@addCourseBtn" [translate]="'buttons.add'">Add Course</button></p>
             </div>
       </td>
       </tr>

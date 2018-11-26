@@ -36,8 +36,8 @@
               <option *ngFor="let group of groups" [ngValue]="group">{{group.name}}</option>
           </select>
         </td>
-        <td><button (click) = "deleteLesson(lesson)" i18n="@@deleteLessonBtn" [translate]="'lesson.deleteBtn'">Delete Lesson</button></td>
-        <td><button (click) = "updateLesson(lesson)" i18n="@@updateLessonBtn" [translate]="'lesson.updateBtn'">Update Lesson</button></td>
+        <td><button (click) = "deleteLesson(lesson)" i18n="@@deleteLessonBtn" [translate]="'buttons.delete'">Delete Lesson</button></td>
+        <td><button (click) = "updateLesson(lesson)" i18n="@@updateLessonBtn" [translate]="'buttons.update'">Update Lesson</button></td>
       </tr>
 
     </table>
@@ -67,7 +67,7 @@
                          <option *ngFor="let group of groups" [ngValue]="group">{{group.name}}</option>
                      </select>
                      </p>
-        <p><button (click)="addLesson()" i18n="@@addLessonBtn" [translate]="'lesson.addBtn'">Add Lesson</button></p>
+        <p><button (click)="addLesson()" i18n="@@addLessonBtn" [translate]="'buttons.add'">Add Lesson</button></p>
     </div>
     </td>
     </tr>

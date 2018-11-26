@@ -19,8 +19,8 @@
         <td><input [ngModel]="term.startDate|date:'yyyy-MM-dd'" (ngModelChange)="term.startDate=$event" type="date"></td>
         <td><input [ngModel]="term.endDate|date:'yyyy-MM-dd'" (ngModelChange)="term.endDate=$event" type="date"></td>
         <td><input type="checkbox" [ngModel]="term.closed" (change)="closeTerm(term)"></td>
-        <td><button (click) = "deleteTerm(term)" i18n="@@deleteTermBtn" [translate]="'term.deleteBtn'">Delete Term</button></td>
-        <td><button (click) = "updateTerm(term)" i18n="@@updateTermBtn" [translate]="'term.updateBtn'">Update Term</button></td>
+        <td><button (click) = "deleteTerm(term)" i18n="@@deleteTermBtn" [translate]="'buttons.delete'">Delete Term</button></td>
+        <td><button (click) = "updateTerm(term)" i18n="@@updateTermBtn" [translate]="'buttons.update'">Update Term</button></td>
       </tr>
 
     </table>
@@ -33,7 +33,7 @@
                            <input type="date" [(ngModel)]="newTerm.startDate" required></p>
         <p><label i18n="@@termEndDateInput" [translate]="'term.endDateInput'">Input Term End Date </label>
                            <input type="date" [(ngModel)]="newTerm.endDate" required></p>
-        <button (click)="addTerm()" i18n="@@addTermBtn" [translate]="'term.addBtn'">Add Term</button>
+        <button (click)="addTerm()" i18n="@@addTermBtn" [translate]="'buttons.add'">Add Term</button>
     </div>
     </td>
     </tr>

@@ -28,8 +28,8 @@
               <option *ngFor="let student of students" [ngValue]="student">{{student.name}} {{student.surname}}</option>
           </select>
         </td>
-        <td><button (click) = "deleteMarkForLesson(markForLesson)" i18n="@@deleteMarkForLessonBtn" [translate]="'markForLesson.deleteBtn'">Delete MarkForLesson</button></td>
-        <td><button (click) = "updateMarkForLesson(markForLesson)" i18n="@@updateMarkForLessonBtn" [translate]="'markForLesson.updateBtn'">Update MarkForLesson</button></td>
+        <td><button (click) = "deleteMarkForLesson(markForLesson)" i18n="@@deleteMarkForLessonBtn" [translate]="'buttons.delete'">Delete MarkForLesson</button></td>
+        <td><button (click) = "updateMarkForLesson(markForLesson)" i18n="@@updateMarkForLessonBtn" [translate]="'buttons.update'">Update MarkForLesson</button></td>
       </tr>
 
     </table>
@@ -53,7 +53,7 @@
                          </select>
                          </p>
 
-            <p><button (click)="addMarkForLesson()" i18n="@@addMarkForLessonBtn" [translate]="'markForLesson.addBtn'">Add Mark for Lesson</button></p>
+            <p><button (click)="addMarkForLesson()" i18n="@@addMarkForLessonBtn" [translate]="'buttons.add'">Add Mark for Lesson</button></p>
         </div>
         </td>
         </tr>

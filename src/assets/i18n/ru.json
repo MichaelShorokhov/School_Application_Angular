@@ -18,20 +18,14 @@
   "course": {
   "id": "ИД",
   "year": "Год",
-  "yearInput": "Введите год",
-  "addBtn": " Добавить",
-  "deleteBtn": "Удалить",
-  "updateBtn": "Сохранить"
+  "yearInput": "Введите год"
   },
   "group": {
     "id": "ИД",
     "name": "Название",
     "course": "Курс",
     "nameInput": "Введите название",
-    "courseSelect": "Выберите курс",
-    "addBtn": "Добавить",
-    "deleteBtn": "Удалить",
-    "updateBtn": "Сохранить"
+    "courseSelect": "Выберите курс"
   },
   "lesson": {
     "id": "ИД",
@@ -44,18 +38,12 @@
     "groupSelect": "Выберите группу",
     "teacherSelect": "Выберите учителя",
     "termSelect": "Выберите семестр",
-    "subjectSelect": "Выберите предмет",
-    "addBtn": "Добавить",
-    "deleteBtn": "Удалить",
-    "updateBtn": "Сохранить"
+    "subjectSelect": "Выберите предмет"
   },
   "mark": {
     "id": "ИД",
     "value": "Значение",
-    "valueInput": "Введите значение",
-    "addBtn": "Добавить",
-    "deleteBtn": "Удалить",
-    "updateBtn": "Сохранить"
+    "valueInput": "Введите значение"
   },
   "markForLesson": {
     "id": "ИД",
@@ -64,10 +52,7 @@
     "student": "Студент",
     "markSelect": "Выберите оценку",
     "studentSelect": "Выберите студента",
-    "lessonSelect": "Выберите урок",
-    "addBtn": "Добавить",
-    "deleteBtn": "Удалить",
-    "updateBtn": "Сохранить"
+    "lessonSelect": "Выберите урок"
   },
   "student":{
     "id": "ИД",
@@ -80,10 +65,7 @@
     "surnameInput": "Введите фамилию",
     "ageInput": "Введите возраст",
     "phoneInput": "Введите номер телефона",
-    "groupSelect": "Выберите группу",
-    "addBtn": "Добавить",
-    "deleteBtn": "Удалить",
-    "updateBtn": "Сохранить"
+    "groupSelect": "Выберите группу"
   },
   "student-subject": {
     "name": "Название",
@@ -95,10 +77,7 @@
   "subject": {
     "id": "ИД",
     "name": "Название",
-    "nameInput": "Введите название",
-    "addBtn": "Добавить",
-    "deleteBtn": "Удалить",
-    "updateBtn": "Сохранить"
+    "nameInput": "Введите название"
   },
   "teacher":{
     "id": "ИД",
@@ -109,10 +88,7 @@
     "nameInput": "Введите имя",
     "surnameInput": "Введите фамилию",
     "ageInput": "Введите возраст",
-    "phoneInput": "Введите номер телефона",
-    "addBtn": "Добавить",
-    "deleteBtn": "Удалить",
-    "updateBtn": "Сохранить"
+    "phoneInput": "Введите номер телефона"
   },
   "teacher-group": {
     "name": "Название",
@@ -136,10 +112,7 @@
     "closed": "Закрыт",
     "nameInput": "Введите название",
     "startDateInput": "Введите дату начала",
-    "endDateInput": "Введите дату окончания",
-    "addBtn": "Добавить",
-    "deleteBtn": "Удалить",
-    "updateBtn": "Сохранить"
+    "endDateInput": "Введите дату окончания"
   },
   "error":{
     "gettingMarkList": "Ошибка при получении списка оценок",
@@ -165,5 +138,10 @@
     "password": "Пароль",
     "submitBtn": "Войти",
     "logoutBtn": "Выйти с пользователя"
+  },
+  "buttons":{
+    "add": "Добавить",
+    "update": "Сохранить",
+    "delete": "Удалить"
   }
 }

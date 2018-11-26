@@ -13,8 +13,8 @@
       <tr *ngFor="let subject of subjects">
         <td>{{subject.id}}</td>
         <td><input [(ngModel)]="subject.name" type="text" class="text"></td>
-        <td><button (click) = "deleteSubject(subject)" i18n="@@deleteSubjectBtn" [translate]="'subject.deleteBtn'">Delete Subject</button></td>
-        <td><button (click) = "updateSubject(subject)" i18n="@@updateSubjectBtn" [translate]="'subject.updateBtn'">Update Subject</button></td>
+        <td><button (click) = "deleteSubject(subject)" i18n="@@deleteSubjectBtn" [translate]="'buttons.delete'">Delete Subject</button></td>
+        <td><button (click) = "updateSubject(subject)" i18n="@@updateSubjectBtn" [translate]="'buttons.update'">Update Subject</button></td>
       </tr>
     </table>
     </td>
@@ -22,7 +22,7 @@
         <div class="inputPanel">
           <p><label i18n="@@subjectNameInput" [translate]="'subject.nameInput'">Input Subject Name </label>
           <input type="text" [(ngModel)]="newSubject.name" required class="text"></p>
-          <p><button (click)="addSubject()" i18n="@@addSubjectBtn" [translate]="'subject.addBtn'">Add Subject</button></p>
+          <p><button (click)="addSubject()" i18n="@@addSubjectBtn" [translate]="'buttons.add'">Add Subject</button></p>
         </div>
         </td>
         </tr>

@@ -11,6 +11,7 @@ import {TranslateService} from '@ngx-translate/core';
 export class CourseComponent implements OnInit {
   courses: Course[] = [];
   newCourse: Course;
+  blabla;
 
   constructor(private service : CourseService, private translate: TranslateService) { }
 

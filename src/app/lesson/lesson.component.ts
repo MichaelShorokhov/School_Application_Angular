@@ -144,6 +144,6 @@ export class LessonComponent implements OnInit {
     lesson.teacher.groups.forEach(group =>{if(group.id==lesson.group.id ) groupsValid=true;});
     lesson.teacher.subjects.forEach(subject=>{if(subject.id==lesson.subject.id) subjectsValid=true;});
     if (lesson.date<=lesson.term.endDate && lesson.date>=lesson.term.startDate) dateValid=true;
-    return (groupsValid && subjectsValid&&dateValid);
+    return (groupsValid && subjectsValid && dateValid);
   }
 }

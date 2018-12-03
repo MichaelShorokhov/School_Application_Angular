@@ -1,7 +1,7 @@
 <div class="row" style="margin-top: 28px;">
         <table>
         <tr>
-        <td class="table">
+        <td>
       <label i18n="@@studentSelect" [translate]="'student-subject.studentSelect'">Select Student </label>
       <select [(ngModel)]="selectedStudent" (change)="getSubjectsByStudent(selectedStudent)" class="selct">
           <option *ngFor="let student of students" [ngValue]="student">{{student.name}} {{student.surname}}</option>
